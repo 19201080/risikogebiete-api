@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+HYPHEN_SEPARATOR = ' - '
+EN_DASH_SEPARATOR = ' – '
+EN_DASH_TYPO_SEPARATOR = '– '
+
+COUNTRY_SEPARATORS = [
+    HYPHEN_SEPARATOR,
+    EN_DASH_SEPARATOR,
+    EN_DASH_TYPO_SEPARATOR
+]
