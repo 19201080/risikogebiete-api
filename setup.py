@@ -43,7 +43,10 @@ setup(
     include_package_data=True,
     keywords='risikogebiete_analysis',
     name='risikogebiete_analysis',
-    packages=find_packages(include=['risikogebiete_analysis', 'risikogebiete_analysis.*']),
+    packages=find_packages(include=[
+        'risikogebiete_analysis',
+        'risikogebiete_analysis.*']
+    ),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,

@@ -6,7 +6,7 @@ import pytest
 
 from click.testing import CliRunner
 
-from risikogebiete_analysis import risikogebiete_analysis
+# from risikogebiete_analysis import risikogebiete_analysis
 from risikogebiete_analysis import cli
 
 
