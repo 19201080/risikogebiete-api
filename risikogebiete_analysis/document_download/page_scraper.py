@@ -25,10 +25,19 @@ def get_date_time(string):
     return date.isoformat()
 
 
+def get_filename(url):
+    filename = url.split('.pdf')[0].split('/')[-1]
+    return filename
+
+
 def get_page_content(url):
     keyword = 'Archiv_Risikogebiete'
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
     parent = soup.select_one('ul[class="links"]')
     links = parent.select(f'a[href*={keyword}]')
-    return {get_date_time(link.string): link['href'] for link in links}
+    return {
+        get_filename(link['href']): {
+            'date': get_date_time(link.string),
+            'url': link['href']
+        } for link in links}
