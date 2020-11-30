@@ -10,7 +10,14 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['Click>=7.0', 'pdfminer.six']
+requirements = [
+    'Click>=7.0',
+    'pdfminer.six',
+    'requests',
+    'beautifulsoup4',
+    'aiofiles',
+    'aiohttp',
+]
 
 setup_requirements = ['pytest-runner', ]
 
