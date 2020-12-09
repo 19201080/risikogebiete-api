@@ -9,36 +9,10 @@ This module contains the analyse_pdf function, that parses the raw text from
 the extracted pdf and returns a dict of countries and details about them.
 """
 
-from risikogebiete_analysis.pdf_analysis.constants import COUNTRY_SEPARATORS
+import re
 
-
-def country_only_parsing(element):
-    sep = element.rfind(' (')
-    country_name = element[:sep]
-    details = element[sep:].strip()
-    return {'name': country_name, 'case': 'simple', 'details': details}
-
-
-def exceptions_parsing(country_name, details):
-    return {'name': country_name, 'case': 'except', 'details': details}
-
-
-def regions_parsing(country_name, details):
-    return {'name': country_name, 'case': 'regions', 'details': details}
-
-
-def country_with_regions_parsing(element, sep_index):
-    first_region_bullet = ': o '
-    exception_text = 'mit Ausnahme'
-
-    smallest_country_sep = min(len(el) for el in COUNTRY_SEPARATORS)
-    country_name = element[:sep_index]
-    details = element[sep_index+smallest_country_sep:].strip()
-    if details.find(first_region_bullet) != -1:
-        return regions_parsing(country_name, details)
-    if details.find(exception_text) != -1:
-        return exceptions_parsing(country_name, details)
-    return {'name': country_name, 'case': 'complex', 'details': details}
+from risikogebiete_analysis.pdf_analysis.constants import \
+    COUNTRY_SEPARATORS, INTRO_LINE, END_LINES, BULLETS, REGION_BULLET
 
 
 def separator_in_parenthesis(element, sep_index):
@@ -55,28 +29,96 @@ def separator_in_parenthesis(element, sep_index):
 
 
 def find_complex_case(element):
-    results = [element.find(sep) for sep in COUNTRY_SEPARATORS]
-    results = [sep for sep in results
-               if not separator_in_parenthesis(element, sep) and sep != -1]
-    return -1 if len(results) == 0 else min(results)
+    separator = [el for sep in sorted(COUNTRY_SEPARATORS, key=len)[::-1]
+                 for el in re.findall(sep, element)]
+    if not separator:
+        return False
+    results = [match.start() for match in re.finditer(separator[0], element)
+               if not separator_in_parenthesis(element, match.start())]
+    return results
 
 
-def analyse_country(element):
-    complex_sep_position = find_complex_case(element)
-    if complex_sep_position == -1:
-        return country_only_parsing(element)
-    return country_with_regions_parsing(element, complex_sep_position)
+def remove_region_bullets(element):
+    return '\n'.join(line for line in element.split('\n')
+                     if not line.startswith(REGION_BULLET))
 
 
-def analyse_pdf(stream, start_line, end_line):
-    start_index = stream.find(start_line)
-    end_index = stream.rfind(end_line)
-    assert(start_index != -1), 'start_line not found'
-    assert (end_index != -1), 'end_line not found'
-    list_result = stream[start_index+len(start_line):end_index].split('•')
-    list_result = [analyse_country(el.strip()) for el in list_result
-                   if not el.isspace()]
-    dict_result = {el['name']: {'case': el['case'], 'details': el['details']}
-                   for el in list_result}
+def no_date_in_parenthesis(element):
+    return re.search(r'(\d+.\s?\w+)', element.replace('\n', '')) is None
 
-    return dict_result
+
+def flatten_list(list_of_list):
+    return [item for sublist in list_of_list for item in sublist]
+
+
+def analyse_complex_country(element, separators, pattern):
+    complex_matches = [element[separators[idx - 1] if idx else None:sep]
+                       for idx, sep in enumerate(separators)]
+    complex_matches = [element for group in complex_matches
+                       for element in group.split('\n')
+                       if not any(element.startswith(sep)
+                                  for sep in COUNTRY_SEPARATORS)]
+    complex_matches = [[element] if no_date_in_parenthesis(element)
+                       else pattern.findall(element.replace('\n', ''))
+                       for element in complex_matches
+                       if element]
+    return flatten_list(complex_matches)
+
+
+def extract_country(element):
+    pattern = re.compile(r'(.+)?\(.*\d+.\s?\w+\)?')
+
+    element = remove_region_bullets(element)
+    if separators := find_complex_case(element):
+        return analyse_complex_country(element, separators, pattern)
+    simple_case = [el for el in pattern.findall(element.replace('\n', ''))]
+    if simple_case:
+        return simple_case
+    return [element]
+
+
+def find_bullet_list(text, bullets):
+    bullet_list = {text.find('\n' + bullet): bullet for bullet in bullets
+                   if text.find('\n' + bullet) >= 0}
+    if len(bullet_list) == 0:
+        raise ValueError('no bullet found')
+    first_index = min(bullet_list.keys())
+    first_bullet = bullet_list[first_index]
+    return text[first_index + 2:], first_bullet
+
+
+def remove_special_characters(text):
+    return text.replace('\x0c', '').replace('\xa0', ' ')
+
+
+def slice_from_line(text, *lines, reverse=False):
+    found_indexes = [el for el in [text.find(line) for line in lines]
+                     if el >= 0]
+    if not found_indexes:
+        return text
+    return text[min(found_indexes):] if reverse else text[:min(found_indexes)]
+
+
+def extract_bullet_list(text):
+    content = remove_special_characters(text)
+    content = slice_from_line(content, INTRO_LINE, reverse=True)
+    try:
+        content, first_bullet = find_bullet_list(content, BULLETS)
+    except ValueError as e:
+        print(e)
+        return 1
+    content = slice_from_line(content, *END_LINES)
+
+    spaced_bullet = f'{first_bullet} '
+    cleaned_content = content.split(spaced_bullet)
+    cleaned_content = [item.strip() for item in cleaned_content
+                       if any(char.isalnum() for char in item)]
+    return cleaned_content
+
+
+def analyse_pdf(stream):
+    bullet_list = extract_bullet_list(stream)
+    country_list = flatten_list(extract_country(country)
+                                for country in bullet_list)
+    country_list = [country.strip() for country in country_list]
+    return country_list
