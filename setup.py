@@ -17,6 +17,8 @@ requirements = [
     'beautifulsoup4',
     'aiofiles',
     'aiohttp',
+    'country_list',
+    'iso3166',
 ]
 
 setup_requirements = ['pytest-runner', ]
