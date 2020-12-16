@@ -11,8 +11,13 @@ the extracted pdf and returns a dict of countries and details about them.
 
 import re
 
+from country_list import countries_for_language
+from iso3166 import countries_by_alpha2
+
 from risikogebiete_analysis.pdf_analysis.constants import \
     COUNTRY_SEPARATORS, INTRO_LINE, END_LINES, BULLETS, REGION_BULLET
+from risikogebiete_analysis.pdf_analysis.mistyped_countries import \
+    parse_mistyped_countries
 
 
 def separator_in_parenthesis(element, sep_index):
@@ -116,9 +121,28 @@ def extract_bullet_list(text):
     return cleaned_content
 
 
+def country_pattern(name=None, alpha2=None, numeric=None):
+    return str({'name': name, 'alpha2': alpha2, 'numeric': numeric})
+
+
+def translate_countries(countries):
+    country_codes = {name: code
+                     for code, name in countries_for_language('de')}
+    country_data = {al2: country_pattern(country.name, al2, country.numeric)
+                    for al2, country in countries_by_alpha2.items()}
+    return [
+        country_data.get(
+            country_codes.get(
+                country,
+                parse_mistyped_countries(country, country_codes)),
+            country_pattern(country))
+        for country in countries]
+
+
 def analyse_pdf(stream):
     bullet_list = extract_bullet_list(stream)
     country_list = flatten_list(extract_country(country)
                                 for country in bullet_list)
     country_list = [country.strip() for country in country_list]
+    country_list = translate_countries(country_list)
     return country_list
