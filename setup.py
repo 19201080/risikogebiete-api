@@ -19,6 +19,7 @@ requirements = [
     'aiohttp',
     'country_list',
     'iso3166',
+    'aiocsv',
 ]
 
 setup_requirements = ['pytest-runner', ]

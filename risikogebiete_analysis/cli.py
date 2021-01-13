@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 
 import asyncio
-import csv
 from datetime import datetime
+import json
 import os
 import re
 import sys
 
+import aiocsv
 import aiofiles
 
 from risikogebiete_analysis.pdf_analysis.pdf_extractor import extract_pdf_data
@@ -47,6 +48,7 @@ def filename_to_datetime(filename):
 
 async def analyse_report(path):
     analysis = analyse_pdf(extract_pdf_data(path))
+    analysis = sorted(analysis, key=lambda x: x['name'])
     timestamp = filename_to_datetime(path.split('/')[-1])
     print(f'analysed report: {path.split("/")[-1]}')
     return timestamp, analysis
@@ -67,22 +69,29 @@ async def write_to_file(data, filename):
 
 async def write_to_csv(data, filename):
     data = sorted(data, key=lambda el: el[0])
-    with open(filename, mode='w') as file:
+    async with aiofiles.open(filename, mode='w') as file:
         fieldnames = ['timestamp', 'countries']
-        writer = csv.DictWriter(file, fieldnames=fieldnames)
-        writer.writeheader()
-        for line in data:
-            writer.writerow({
-                fieldnames[0]: line[0],
-                fieldnames[1]: ','.join(line[1])
-            })
+        writer = aiocsv.AsyncWriter(file)
+        await writer.writerow(fieldnames)
+        await writer.writerows([timestamp, ','.join(str(list(country.values()))
+                                                    for country in countries)]
+                               for timestamp, countries in data)
+
+
+async def write_to_json(data, filename):
+    data = sorted(data, key=lambda el: el[0])
+    data = {timestamp: countries for timestamp, countries in data}
+    async with aiofiles.open(filename, mode='w') as file:
+        await file.write(json.dumps(data, indent=2))
 
 
 async def extract_data():
     directory = '../files'
     analysis = await analyse_all_reports(directory)
     print(f'analysed {len(analysis)} report{"s" if len(analysis) else ""}')
-    await write_to_csv(analysis, 'data.csv')
+    return await asyncio.gather(
+        write_to_json(analysis, 'data.json'),
+        write_to_csv(analysis, 'data.csv'))
 
 
 def main():
