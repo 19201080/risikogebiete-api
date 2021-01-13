@@ -73,10 +73,10 @@ async def write_to_csv(data, filename):
         fieldnames = ['timestamp', 'countries']
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
-        for line in data:
+        for timestamp, countries in data:
             writer.writerow({
-                fieldnames[0]: line[0],
-                fieldnames[1]: ','.join(line[1])
+                fieldnames[0]: timestamp,
+                fieldnames[1]: ','.join(str(country) for country in countries)
             })
 
 
@@ -92,6 +92,7 @@ async def extract_data():
     analysis = await analyse_all_reports(directory)
     print(f'analysed {len(analysis)} report{"s" if len(analysis) else ""}')
     await write_to_json(analysis, 'data.json')
+    await write_to_csv(analysis, 'data.csv')
 
 
 def main():
