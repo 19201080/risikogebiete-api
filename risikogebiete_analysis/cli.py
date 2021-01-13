@@ -103,8 +103,8 @@ async def extract_data():
 def main():
     try:
         loop = asyncio.get_event_loop()
-        actions = asyncio.gather(get_reports(), extract_data())
-        loop.run_until_complete(actions)
+        loop.run_until_complete(get_reports())
+        loop.run_until_complete(extract_data())
         loop.close()
         return 0
     except KeyboardInterrupt:
