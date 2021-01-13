@@ -121,14 +121,18 @@ def extract_bullet_list(text):
     return cleaned_content
 
 
-def country_pattern(name=None, alpha2=None, numeric=None):
-    return str({'name': name, 'alpha2': alpha2, 'numeric': numeric})
+def country_pattern(name=None, alpha2=None, alpha3=None, numeric=None):
+    return {'name': name,
+            'alpha2': alpha2,
+            'alpha3': alpha3,
+            'numeric': numeric}
 
 
 def translate_countries(countries):
     country_codes = {name: code
                      for code, name in countries_for_language('de')}
-    country_data = {al2: country_pattern(country.name, al2, country.numeric)
+    country_data = {al2: country_pattern(country.name, al2,
+                                         country.alpha3, country.numeric)
                     for al2, country in countries_by_alpha2.items()}
     return [
         country_data.get(
