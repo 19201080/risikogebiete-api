@@ -48,6 +48,14 @@ def remove_region_bullets(element):
                      if not line.startswith(REGION_BULLET))
 
 
+def remove_gesamt_mention(element):
+    if element:
+        first_world = element[0].split()[0]
+        if first_world.startswith('gesamt'):
+            return [element[0].replace(f'{first_world} ', '')]
+    return element
+
+
 def no_date_in_parenthesis(element):
     return re.search(r'(\d+.\s?\w+)', element.replace('\n', '')) is None
 
@@ -77,6 +85,7 @@ def extract_country(element):
     if separators := find_complex_case(element):
         return analyse_complex_country(element, separators, pattern)
     simple_case = [el for el in pattern.findall(element.replace('\n', ''))]
+    simple_case = remove_gesamt_mention(simple_case)
     if simple_case:
         return simple_case
     return [element]
