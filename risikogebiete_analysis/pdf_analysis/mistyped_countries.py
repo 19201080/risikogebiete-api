@@ -53,7 +53,7 @@ def parse_mistyped_countries(country, country_codes):
         return country_codes['Trinidad und Tobago']
     if re.match(r'USA', country):
         return country_codes['Vereinigte Staaten']
-    if re.match(r'Vereinigtes Königreich von Großbritannien.*', country):
+    if re.match(r'Vereinigtes Königreich( von)? Großbritannien.*', country):
         return country_codes['Vereinigtes Königreich']
     if re.match(r'Weißrussland', country):
         return country_codes['Belarus']
