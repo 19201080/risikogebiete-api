@@ -137,25 +137,28 @@ def country_pattern(name=None, alpha2=None, alpha3=None, numeric=None):
             'numeric': numeric}
 
 
-def translate_countries(countries):
+def translate_countries(countries, filename):
     country_codes = {name: code
                      for code, name in countries_for_language('de')}
     country_data = {al2: country_pattern(country.name, al2,
                                          country.alpha3, country.numeric)
                     for al2, country in countries_by_alpha2.items()}
-    return [
-        country_data.get(
-            country_codes.get(
-                country,
-                parse_mistyped_countries(country, country_codes)),
-            country_pattern(country))
+    translated_countries = [country_codes.get(
+        country, parse_mistyped_countries(country, country_codes))
         for country in countries]
+    parsed_countries = [country_data.get(country, country_pattern(country))
+                        for country in translated_countries]
+    unrecognized_countries = [country for country in parsed_countries
+                              if not country['alpha2']]
+    for country in unrecognized_countries:
+        print(f'unrecognized country in report {filename}: {country["name"]}')
+    return parsed_countries
 
 
-def analyse_pdf(stream):
+def analyse_pdf(stream, filename):
     bullet_list = extract_bullet_list(stream)
     country_list = flatten_list(extract_country(country)
                                 for country in bullet_list)
     country_list = [country.strip() for country in country_list]
-    country_list = translate_countries(country_list)
+    country_list = translate_countries(country_list, filename)
     return country_list

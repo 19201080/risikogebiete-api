@@ -27,7 +27,8 @@ def extract_pdf_data(filename):
         parser = PDFParser(in_file)
         doc = PDFDocument(parser)
         rsrcmgr = PDFResourceManager()
-        device = TextConverter(rsrcmgr, output_string, laparams=LAParams())
+        laparams = LAParams(char_margin=4.0)
+        device = TextConverter(rsrcmgr, output_string, laparams=laparams)
         interpreter = PDFPageInterpreter(rsrcmgr, device)
         for page in PDFPage.create_pages(doc):
             interpreter.process_page(page)
