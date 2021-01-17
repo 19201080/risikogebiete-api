@@ -53,9 +53,10 @@ def filename_to_datetime(filename):
 
 
 async def analyse_report(path):
-    analysis = analyse_pdf(extract_pdf_data(path))
+    filename = path.split('/')[-1]
+    analysis = analyse_pdf(extract_pdf_data(path), filename)
     analysis = sorted(analysis, key=lambda x: x['name'])
-    timestamp = filename_to_datetime(path.split('/')[-1])
+    timestamp = filename_to_datetime(filename)
     print(f'analysed report: {path.split("/")[-1]}')
     return timestamp, analysis
 
