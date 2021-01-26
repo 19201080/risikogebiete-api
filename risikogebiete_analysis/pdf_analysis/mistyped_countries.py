@@ -4,6 +4,37 @@
 import re
 
 
+def search_mistyped_countries(country, country_codes):
+    commonly_mistyped = parse_mistyped_countries(country, country_codes)
+    if commonly_mistyped:
+        return commonly_mistyped
+    fuzzy_found = fuzzy_search(country, country_codes)
+    return fuzzy_found or country
+
+
+def fuzzy_search(country, country_codes):
+    def get_capitalized_words(sentence):
+        excluded_words = ['Republik', 'Rep']
+        return [word for word in re.findall(r'\w+', sentence)
+                if word[0].isupper() and word not in excluded_words]
+
+    split_countries = {code: get_capitalized_words(name)
+                       for name, code in country_codes.items()}
+    words_in_country = get_capitalized_words(country)
+    results = []
+    for code, split_name in split_countries.items():
+        found = [word if word in split_name else None
+                 for word in words_in_country]
+        if any(found):
+            results.append((code, found))
+    if not results:
+        return
+    result = sorted(results, key=lambda x: len([el for el in x[1] if not el]))
+    print(f'fuzzy search results for {country}', result)
+    first_code = result[0][0]
+    return first_code
+
+
 def parse_mistyped_countries(country, country_codes):
     if re.match(r'Bosni(a|en) [au]nd Herzego[vw]ina', country):
         return country_codes['Bosnien und Herzegowina']
@@ -57,4 +88,4 @@ def parse_mistyped_countries(country, country_codes):
         return country_codes['Vereinigtes Königreich']
     if re.match(r'Weißrussland', country):
         return country_codes['Belarus']
-    return country
+    return
