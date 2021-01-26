@@ -3,22 +3,24 @@
 
 import asyncio
 from datetime import datetime
-import json
 import os
 import re
 import sys
-
-import aiocsv
-import aiofiles
 
 from risikogebiete_analysis.pdf_analysis.pdf_extractor import extract_pdf_data
 from risikogebiete_analysis.pdf_analysis.pdf_parser import analyse_pdf
 from risikogebiete_analysis.document_download.page_scraper \
     import get_page_content
 from risikogebiete_analysis.document_download.document_comparator \
-    import get_missing_files
+    import get_missing_reports
 from risikogebiete_analysis.document_download.file_downloader \
     import manage_downloads
+from risikogebiete_analysis.document_download.file_remover \
+    import remove_downloaded_files
+from risikogebiete_analysis.report_export.individual_report \
+    import save_individual_reports
+from risikogebiete_analysis.report_export.complete_report \
+    import save_complete_report
 
 
 async def get_reports():
@@ -28,8 +30,8 @@ async def get_reports():
         'Coronavirus/Transport/Archiv_Risikogebiete/DE-Tab.html'
     )
     results = get_page_content(url)
-    missing_files = get_missing_files(results)
-    await manage_downloads(missing_files, root_url)
+    missing_reports = get_missing_reports(results)
+    await manage_downloads(missing_reports, root_url)
 
 
 def filename_to_datetime(filename):
@@ -58,47 +60,28 @@ async def analyse_report(path):
     analysis = sorted(analysis, key=lambda x: x['name'])
     timestamp = filename_to_datetime(filename)
     print(f'analysed report: {path.split("/")[-1]}')
-    return timestamp, analysis
+    return timestamp, filename, analysis
 
 
 async def analyse_all_reports(directory):
-    tasks = [analyse_report(f'{directory}/{file}')
+    tasks = [analyse_report(f'{directory}{file}')
              for file in os.listdir(directory)]
     return await asyncio.gather(*tasks)
 
 
-async def write_to_file(data, filename):
-    data = sorted(data, key=lambda el: el[0])
-    async with aiofiles.open(filename, mode='w') as file:
-        for item in data:
-            await file.write(f'{item[0]}: {str(item[1])}\n')
-
-
-async def write_to_csv(data, filename):
-    data = sorted(data, key=lambda el: el[0])
-    async with aiofiles.open(filename, mode='w') as file:
-        fieldnames = ['timestamp', 'countries']
-        writer = aiocsv.AsyncWriter(file)
-        await writer.writerow(fieldnames)
-        await writer.writerows([timestamp, ','.join(str(list(country.values()))
-                                                    for country in countries)]
-                               for timestamp, countries in data)
-
-
-async def write_to_json(data, filename):
-    data = sorted(data, key=lambda el: el[0])
-    data = {timestamp: countries for timestamp, countries in data}
-    async with aiofiles.open(filename, mode='w') as file:
-        await file.write(json.dumps(data, indent=2))
-
-
 async def extract_data():
-    directory = '../files'
-    analysis = await analyse_all_reports(directory)
+    download_directory = '../files/'
+    report_directory = '../individual_reports/'
+    complete_report_name = '../data'
+
+    if not os.path.exists(download_directory):
+        return
+
+    analysis = await analyse_all_reports(download_directory)
     print(f'analysed {len(analysis)} report{"s" if len(analysis) else ""}')
     return await asyncio.gather(
-        write_to_json(analysis, 'data.json'),
-        write_to_csv(analysis, 'data.csv'))
+        save_individual_reports(analysis, report_directory),
+        save_complete_report(analysis, complete_report_name))
 
 
 def main():
@@ -107,6 +90,7 @@ def main():
         loop.run_until_complete(get_reports())
         loop.run_until_complete(extract_data())
         loop.close()
+        remove_downloaded_files()
         return 0
     except KeyboardInterrupt:
         return 0
