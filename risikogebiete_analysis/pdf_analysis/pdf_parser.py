@@ -17,7 +17,7 @@ from iso3166 import countries_by_alpha2
 from risikogebiete_analysis.pdf_analysis.constants import \
     COUNTRY_SEPARATORS, INTRO_LINE, END_LINES, BULLETS, REGION_BULLET
 from risikogebiete_analysis.pdf_analysis.mistyped_countries import \
-    parse_mistyped_countries
+    search_mistyped_countries
 
 
 def separator_in_parenthesis(element, sep_index):
@@ -143,8 +143,9 @@ def translate_countries(countries, filename):
     country_data = {al2: country_pattern(country.name, al2,
                                          country.alpha3, country.numeric)
                     for al2, country in countries_by_alpha2.items()}
-    translated_countries = [country_codes.get(
-        country, parse_mistyped_countries(country, country_codes))
+    translated_countries = [
+        country_codes[country] if country in country_codes.keys() else
+        search_mistyped_countries(country, country_codes)
         for country in countries]
     parsed_countries = [country_data.get(country, country_pattern(country))
                         for country in translated_countries]
