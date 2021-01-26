@@ -9,6 +9,7 @@ This module contains a function to manage the download of missing files.
 """
 
 import asyncio
+import os
 
 import aiohttp
 import aiofiles
@@ -17,6 +18,9 @@ import aiofiles
 async def download_file(filename, url, session: aiohttp.ClientSession):
     file_directory = '../files/'
     path = f'{file_directory}{filename}.pdf'
+
+    if not os.path.exists(file_directory):
+        os.mkdir(file_directory)
 
     async with session.get(url) as response:
         async with aiofiles.open(path, mode='wb') as file:
