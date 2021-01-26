@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 
 def parse_data_for_csv(data):
-    return [[timestamp, ','.join(str(list(country.values()))
-                                 for country in countries)]
+    return [[timestamp,
+             *['\t'.join(str(val) for val in country.values())
+               for country in countries]]
             for timestamp, filename, countries in data]
 
 

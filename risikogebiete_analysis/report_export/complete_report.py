@@ -67,7 +67,8 @@ async def save_complete_json_report(data, filename):
 async def write_to_csv(data, filename):
     data = sorted(data, key=lambda el: el[0])
     async with aiofiles.open(filename, mode='w') as file:
-        fieldnames = ['timestamp', 'countries']
+        fieldnames = ['timestamp',
+                      '\t'.join(['country', 'alpha2', 'alpha3', 'numeric'])]
         writer = aiocsv.AsyncWriter(file)
         await writer.writerow(fieldnames)
         await writer.writerows(parse_data_for_csv(data))
