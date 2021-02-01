@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-risikogebiete_analysis.pdf_analysis.pdf_extractor
+risikogebiete_api.pdf_analysis.pdf_extractor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Code taken from the docs of pdfminer.six.

@@ -1,16 +1,16 @@
 ======================
-risikogebiete_analysis
+risikogebiete_api
 ======================
 
 
-.. image:: https://img.shields.io/pypi/v/risikogebiete_analysis.svg
-        :target: https://pypi.python.org/pypi/risikogebiete_analysis
+.. image:: https://img.shields.io/pypi/v/risikogebiete_api.svg
+        :target: https://pypi.python.org/pypi/risikogebiete_api
 
-.. image:: https://img.shields.io/travis/19201080/risikogebiete_analysis.svg
-        :target: https://travis-ci.com/19201080/risikogebiete_analysis
+.. image:: https://img.shields.io/travis/19201080/risikogebiete_api.svg
+        :target: https://travis-ci.com/19201080/risikogebiete_api
 
-.. image:: https://readthedocs.org/projects/risikogebiete-analysis/badge/?version=latest
-        :target: https://risikogebiete-analysis.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/risikogebiete-api/badge/?version=latest
+        :target: https://risikogebiete-api.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
@@ -20,7 +20,7 @@ risikogebiete_analysis
 
 
 * Free software: MIT license
-* Documentation: https://risikogebiete-analysis.readthedocs.io.
+* Documentation: https://risikogebiete-api.readthedocs.io.
 
 
 Features

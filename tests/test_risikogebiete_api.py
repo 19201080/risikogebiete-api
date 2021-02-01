@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
-"""Tests for `risikogebiete_analysis` package."""
+"""Tests for `risikogebiete_api` package."""
 
 import pytest
 
 from click.testing import CliRunner
 
-# from risikogebiete_analysis import risikogebiete_analysis
-from risikogebiete_analysis import cli
+# from risikogebiete_api import risikogebiete_api
+from risikogebiete_api import cli
 
 
 @pytest.fixture
@@ -31,7 +31,7 @@ def test_command_line_interface():
     runner = CliRunner()
     result = runner.invoke(cli.main)
     assert result.exit_code == 0
-    assert 'risikogebiete_analysis.cli.main' in result.output
+    assert 'risikogebiete_api.cli.main' in result.output
     help_result = runner.invoke(cli.main, ['--help'])
     assert help_result.exit_code == 0
     assert '--help  Show this message and exit.' in help_result.output

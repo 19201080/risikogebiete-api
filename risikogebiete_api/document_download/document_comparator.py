@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-risikogebiete_analysis.document_download.document_comparator
+risikogebiete_api.document_download.document_comparator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This module contains the get_missing_reports function that compares results
