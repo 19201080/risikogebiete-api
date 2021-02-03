@@ -53,8 +53,6 @@ To run the program (from the root directory):
 - country_list
 - iso3166
 
-github actions
-
 
 ## Credits
 
