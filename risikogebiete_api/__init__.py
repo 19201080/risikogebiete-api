@@ -1,4 +1,4 @@
-"""Top-level package for risikogebiete_analysis."""
+"""Top-level package for risikogebiete_api."""
 
 __author__ = """19201080"""
 __email__ = '1920@10.80'

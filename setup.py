@@ -4,11 +4,8 @@
 
 from setuptools import setup, find_packages
 
-with open('README.rst') as readme_file:
+with open('README.md') as readme_file:
     readme = readme_file.read()
-
-with open('HISTORY.rst') as history_file:
-    history = history_file.read()
 
 requirements = [
     'Click>=7.0',
@@ -44,23 +41,23 @@ setup(
     description="-",
     entry_points={
         'console_scripts': [
-            'risikogebiete_analysis=risikogebiete_analysis.cli:main',
+            'risikogebiete_api=risikogebiete_api.cli:main',
         ],
     },
     install_requires=requirements,
     license="MIT license",
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     include_package_data=True,
-    keywords='risikogebiete_analysis',
-    name='risikogebiete_analysis',
+    keywords='risikogebiete_api',
+    name='risikogebiete_api',
     packages=find_packages(include=[
-        'risikogebiete_analysis',
-        'risikogebiete_analysis.*']
+        'risikogebiete_api',
+        'risikogebiete_api.*']
     ),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/19201080/risikogebiete_analysis',
+    url='https://github.com/19201080/risikogebiete_api',
     version='0.1.0',
     zip_safe=False,
 )

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-risikogebiete_analysis.document_download.page_scraper
+risikogebiete_api.document_download.page_scraper
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This module contains the get_page_content function, to scrape the web page of

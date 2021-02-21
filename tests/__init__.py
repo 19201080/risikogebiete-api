@@ -1,1 +1,1 @@
-"""Unit test package for risikogebiete_analysis."""
+"""Unit test package for risikogebiete_api."""

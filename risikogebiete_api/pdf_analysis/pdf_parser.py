@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-risikogebiete_analysis.pdf_analysis.pdf_parser
+risikogebiete_api.pdf_analysis.pdf_parser
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This module contains the analyse_pdf function, that parses the raw text from
@@ -14,9 +14,9 @@ import re
 from country_list import countries_for_language
 from iso3166 import countries_by_alpha2
 
-from risikogebiete_analysis.pdf_analysis.constants import \
+from risikogebiete_api.pdf_analysis.constants import \
     COUNTRY_SEPARATORS, INTRO_LINE, END_LINES, BULLETS, REGION_BULLET
-from risikogebiete_analysis.pdf_analysis.mistyped_countries import \
+from risikogebiete_api.pdf_analysis.mistyped_countries import \
     parse_mistyped_countries
 
 

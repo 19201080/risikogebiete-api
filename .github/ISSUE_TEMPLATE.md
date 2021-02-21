@@ -1,4 +1,4 @@
-* risikogebiete_analysis version:
+* risikogebiete_api version:
 * Python version:
 * Operating System:
 

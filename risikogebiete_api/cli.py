@@ -7,19 +7,19 @@ import os
 import re
 import sys
 
-from risikogebiete_analysis.pdf_analysis.pdf_extractor import extract_pdf_data
-from risikogebiete_analysis.pdf_analysis.pdf_parser import analyse_pdf
-from risikogebiete_analysis.document_download.page_scraper \
+from risikogebiete_api.pdf_analysis.pdf_extractor import extract_pdf_data
+from risikogebiete_api.pdf_analysis.pdf_parser import analyse_pdf
+from risikogebiete_api.document_download.page_scraper \
     import get_page_content
-from risikogebiete_analysis.document_download.document_comparator \
+from risikogebiete_api.document_download.document_comparator \
     import get_missing_reports
-from risikogebiete_analysis.document_download.file_downloader \
+from risikogebiete_api.document_download.file_downloader \
     import manage_downloads
-from risikogebiete_analysis.document_download.file_remover \
+from risikogebiete_api.document_download.file_remover \
     import remove_downloaded_files
-from risikogebiete_analysis.report_export.individual_report \
+from risikogebiete_api.report_export.individual_report \
     import save_individual_reports
-from risikogebiete_analysis.report_export.complete_report \
+from risikogebiete_api.report_export.complete_report \
     import save_complete_report
 
 

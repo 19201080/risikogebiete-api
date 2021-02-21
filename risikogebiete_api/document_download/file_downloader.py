@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-risikogebiete_analysis.document_download.file_downloader
+risikogebiete_api.document_download.file_downloader
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This module contains a function to manage the download of missing files.
