@@ -3,9 +3,12 @@
 
 import asyncio
 from datetime import datetime
+import logging
 import os
 import re
 import sys
+
+import click
 
 from risikogebiete_api.pdf_analysis.pdf_extractor import extract_pdf_data
 from risikogebiete_api.pdf_analysis.pdf_parser import analyse_pdf
@@ -21,6 +24,10 @@ from risikogebiete_api.report_export.individual_report \
     import save_individual_reports
 from risikogebiete_api.report_export.complete_report \
     import save_complete_report
+
+logger = logging.getLogger(__name__)
+LOG_FORMAT = ('%(asctime)-15s [%(levelname)-7s]: '
+              '%(message)s (%(filename)s:%(lineno)s)')
 
 
 async def get_reports():
@@ -59,7 +66,7 @@ async def analyse_report(path):
     analysis = analyse_pdf(extract_pdf_data(path), filename)
     analysis = sorted(analysis, key=lambda x: x['name'])
     timestamp = filename_to_datetime(filename)
-    print(f'analysed report: {path.split("/")[-1]}')
+    logger.debug(f'analysed report: {path.split("/")[-1]}')
     return timestamp, filename, analysis
 
 
@@ -78,13 +85,19 @@ async def extract_data():
         return
 
     analysis = await analyse_all_reports(download_directory)
-    print(f'analysed {len(analysis)} report{"s" if len(analysis) else ""}')
+    logger.info(f'analysed {len(analysis)} '
+                f'report{"s" if len(analysis) else ""}')
     return await asyncio.gather(
         save_individual_reports(analysis, report_directory),
         save_complete_report(analysis, complete_report_name))
 
 
-def main():
+@click.command()
+@click.option('--debug/--no-debug', '-d', default=False)
+def main(debug):
+    logging.basicConfig(
+        format=LOG_FORMAT,
+        level=logging.DEBUG if debug else logging.INFO)
     try:
         loop = asyncio.get_event_loop()
         loop.run_until_complete(get_reports())
