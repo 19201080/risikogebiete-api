@@ -95,6 +95,9 @@ async def extract_data():
 @click.command()
 @click.option('--debug/--no-debug', '-d', default=False)
 def main(debug):
+    logging.getLogger('pdfminer').setLevel(logging.WARNING)
+    logging.getLogger('urllib3').setLevel(logging.WARNING)
+    logging.getLogger('asyncio').setLevel(logging.WARNING)
     logging.basicConfig(
         format=LOG_FORMAT,
         level=logging.DEBUG if debug else logging.INFO)
