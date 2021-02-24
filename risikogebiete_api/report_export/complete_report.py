@@ -4,12 +4,15 @@
 import asyncio
 import csv
 import json
+import logging
 import os
 
 import aiocsv
 import aiofiles
 
 from .utils import parse_data_for_csv, parse_data_for_json
+
+logger = logging.getLogger(__name__)
 
 
 async def save_complete_report(data, filename):
@@ -21,13 +24,13 @@ async def save_complete_csv_report(data, filename):
     analysed_dates = [el[0] for el in data]
     csv_filename = f'{filename}.csv'
     if not os.path.exists(csv_filename):
-        print(f'{csv_filename} doesn\'t exist, creating new one')
+        logger.info(f'{csv_filename} doesn\'t exist, creating new one')
         await write_to_csv(data, csv_filename)
     else:
         async with aiofiles.open(csv_filename, mode='r+') as f:
             content = await f.read()
             if not content.strip():
-                print(f'{csv_filename} is empty, writing from scratch')
+                logger.debug(f'{csv_filename} is empty, writing from scratch')
                 await write_to_csv(data, csv_filename)
             else:
                 fieldnames, *saved_data = [
@@ -46,13 +49,13 @@ async def save_complete_json_report(data, filename):
     analysed_dates = [el[0] for el in data]
     json_filename = f'{filename}.json'
     if not os.path.exists(json_filename):
-        print(f'{json_filename} doesn\'t exist, creating new one')
+        logger.info(f'{json_filename} doesn\'t exist, creating new one')
         await write_to_json(data, json_filename)
     else:
         async with aiofiles.open(json_filename, mode='r+') as f:
             content = await f.read()
             if not content.strip():
-                print(f'{json_filename} is empty, writing from scratch')
+                logger.debug(f'{json_filename} is empty, writing from scratch')
                 await write_to_json(data, json_filename)
             else:
                 saved_data = {k: v for k, v in json.loads(content).items()

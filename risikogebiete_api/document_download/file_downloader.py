@@ -9,10 +9,13 @@ This module contains a function to manage the download of missing files.
 """
 
 import asyncio
+import logging
 import os
 
 import aiohttp
 import aiofiles
+
+logger = logging.getLogger(__name__)
 
 
 async def download_file(filename, url, session: aiohttp.ClientSession):
@@ -26,7 +29,7 @@ async def download_file(filename, url, session: aiohttp.ClientSession):
         async with aiofiles.open(path, mode='wb') as file:
             async for data, _ in response.content.iter_chunks():
                 await file.write(data)
-    print(f'saved: {filename}')
+    logger.debug(f'saved new report: {filename}')
 
 
 async def manage_downloads(files, root_url):
@@ -34,5 +37,6 @@ async def manage_downloads(files, root_url):
         tasks = []
         for key, value in files.items():
             tasks.append(download_file(key, root_url + value['url'], session))
-        print(f'downloading {len(tasks)} file{"s" if len(tasks) > 1 else ""}')
+        logger.info(f'downloading {len(tasks)} file'
+                    f'{"s" if len(tasks) > 1 else ""}')
         await asyncio.gather(*tasks)

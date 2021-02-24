@@ -9,6 +9,7 @@ This module contains the analyse_pdf function, that parses the raw text from
 the extracted pdf and returns a dict of countries and details about them.
 """
 
+import logging
 import re
 
 from country_list import countries_for_language
@@ -18,6 +19,8 @@ from risikogebiete_api.pdf_analysis.constants import \
     COUNTRY_SEPARATORS, INTRO_LINE, END_LINES, BULLETS, REGION_BULLET
 from risikogebiete_api.pdf_analysis.mistyped_countries import \
     parse_mistyped_countries
+
+logger = logging.getLogger(__name__)
 
 
 def separator_in_parenthesis(element, sep_index):
@@ -119,7 +122,7 @@ def extract_bullet_list(text):
     try:
         content, first_bullet = find_bullet_list(content, BULLETS)
     except ValueError as e:
-        print(e)
+        logger.error(e)
         return 1
     content = slice_from_line(content, *END_LINES)
 
@@ -151,7 +154,8 @@ def translate_countries(countries, filename):
     unrecognized_countries = [country for country in parsed_countries
                               if not country['alpha2']]
     for country in unrecognized_countries:
-        print(f'unrecognized country in report {filename}: {country["name"]}')
+        logger.warning(f'unrecognized country in report '
+                       f'{filename}: {country["name"]}')
     return parsed_countries
 
 
