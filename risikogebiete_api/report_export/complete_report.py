@@ -79,6 +79,6 @@ async def write_to_csv(data, filename):
 
 async def write_to_json(data, filename):
     data = sorted(data, key=lambda el: el[0])
-    data = {timestamp: countries for timestamp, filename, countries in data}
+    data = {timestamp: countries for timestamp, countries in data}
     async with aiofiles.open(filename, mode='w') as file:
         await file.write(json.dumps(data, sort_keys=True, indent=2))

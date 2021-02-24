@@ -65,9 +65,9 @@ async def analyse_report(path):
     filename = path.split('/')[-1]
     analysis = analyse_pdf(extract_pdf_data(path), filename)
     analysis = sorted(analysis, key=lambda x: x['name'])
-    timestamp = filename_to_datetime(filename)
+    timestamp = filename.replace('.pdf', '')
     logger.debug(f'analysed report: {path.split("/")[-1]}')
-    return timestamp, filename, analysis
+    return timestamp, analysis
 
 
 async def analyse_all_reports(directory):
