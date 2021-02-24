@@ -35,8 +35,10 @@ async def download_file(filename, url, session: aiohttp.ClientSession):
 async def manage_downloads(files, root_url):
     async with aiohttp.ClientSession() as session:
         tasks = []
-        for key, value in files.items():
-            tasks.append(download_file(key, root_url + value['url'], session))
+        for value in files.values():
+            tasks.append(download_file(value['date'],
+                                       root_url + value['url'],
+                                       session))
         logger.info(f'downloading {len(tasks)} file'
                     f'{"s" if len(tasks) > 1 else ""}')
         await asyncio.gather(*tasks)
