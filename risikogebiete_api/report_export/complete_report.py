@@ -10,7 +10,7 @@ import os
 import aiocsv
 import aiofiles
 
-from .utils import parse_data_for_csv, parse_data_for_json
+from risikogebiete_api.utils import parse_data_for_csv, parse_data_for_json
 
 logger = logging.getLogger(__name__)
 
