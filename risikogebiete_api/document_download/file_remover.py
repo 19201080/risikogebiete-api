@@ -4,8 +4,9 @@
 import os
 
 from risikogebiete_api.utils import get_path_from_root
+from risikogebiete_api.constants import FILES
 
-DOWNLOAD_FOLDER = get_path_from_root('files')
+DOWNLOAD_FOLDER = get_path_from_root(FILES)
 
 
 def remove_downloaded_files(folder=DOWNLOAD_FOLDER):
