@@ -12,10 +12,11 @@ from the RKI Risikogebiete archive to the files already downloaded.
 import os
 
 from risikogebiete_api.utils import get_path_from_root
+from risikogebiete_api.constants import INDIVIDUAL_REPORTS
 
 
 def get_missing_reports(scraped_results):
-    local_directory = get_path_from_root('individual_reports')
+    local_directory = get_path_from_root(INDIVIDUAL_REPORTS)
     if not os.path.isdir(local_directory):
         return scraped_results
     local_files = {item.split('.')[0] for item in os.listdir(local_directory)}

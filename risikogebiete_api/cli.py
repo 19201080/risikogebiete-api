@@ -23,6 +23,8 @@ from risikogebiete_api.report_export.individual_report \
 from risikogebiete_api.report_export.complete_report \
     import save_complete_report
 from risikogebiete_api.utils import get_path_from_root
+from risikogebiete_api.constants \
+    import INDIVIDUAL_REPORTS, FILES, DATA, ROOT_URL, URL
 
 logger = logging.getLogger(__name__)
 LOG_FORMAT = ('%(asctime)-15s [%(levelname)-7s]: '
@@ -30,14 +32,9 @@ LOG_FORMAT = ('%(asctime)-15s [%(levelname)-7s]: '
 
 
 async def get_reports():
-    root_url = 'https://www.rki.de'
-    url = (
-        'https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_'
-        'Coronavirus/Transport/Archiv_Risikogebiete/DE-Tab.html'
-    )
-    results = get_page_content(url)
+    results = get_page_content(URL)
     missing_reports = get_missing_reports(results)
-    await manage_downloads(missing_reports, root_url)
+    await manage_downloads(missing_reports, ROOT_URL)
 
 
 async def analyse_report(path):
@@ -56,9 +53,9 @@ async def analyse_all_reports(directory):
 
 
 async def extract_data():
-    download_directory_path = get_path_from_root('files')
-    report_directory_path = get_path_from_root('individual_reports')
-    complete_report_name = 'data'
+    download_directory_path = get_path_from_root(FILES)
+    report_directory_path = get_path_from_root(INDIVIDUAL_REPORTS)
+    complete_report_name = DATA
 
     if not os.path.exists(download_directory_path):
         return

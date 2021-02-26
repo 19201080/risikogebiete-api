@@ -16,12 +16,13 @@ import aiohttp
 import aiofiles
 
 from risikogebiete_api.utils import get_path_from_root
+from risikogebiete_api.constants import FILES
 
 logger = logging.getLogger(__name__)
 
 
 async def download_file(filename, url, session: aiohttp.ClientSession):
-    file_directory = get_path_from_root('files')
+    file_directory = get_path_from_root(FILES)
     path = get_path_from_root(f'{filename}.pdf', file_directory)
 
     if not os.path.exists(file_directory):

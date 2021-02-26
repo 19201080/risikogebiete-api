@@ -14,6 +14,8 @@ from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
 
+from risikogebiete_api.constants import ARCHIV_RISIKOGEBIETE
+
 
 def get_date_time(string):
     input_date = [int(el) for el in string.split()[0].split('.')][::-1]
@@ -31,11 +33,10 @@ def get_filename(url):
 
 
 def get_page_content(url):
-    keyword = 'Archiv_Risikogebiete'
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
     parent = soup.select_one('ul[class="links"]')
-    links = parent.select(f'a[href*={keyword}]')
+    links = parent.select(f'a[href*={ARCHIV_RISIKOGEBIETE}]')
     return {
         get_filename(link['href']): {
             'date': get_date_time(link.string),
