@@ -2,10 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import asyncio
-from datetime import datetime
 import logging
 import os
-import re
 import sys
 
 import click
@@ -39,26 +37,6 @@ async def get_reports():
     results = get_page_content(url)
     missing_reports = get_missing_reports(results)
     await manage_downloads(missing_reports, root_url)
-
-
-def filename_to_datetime(filename):
-    def date_format_2021(digits):
-        return len(digits) == 3 and len(digits[0]) == 4
-
-    def either(iterable, key, default):
-        try:
-            return iterable[key]
-        except IndexError:
-            return default
-
-    digits = re.findall(r'\d+', filename)
-    if date_format_2021(digits):
-        params = digits
-    else:
-        params = (digits[0][4:], digits[0][2:4], digits[0][:2],
-                  either(digits, 1, 0), either(digits, 2, 0))
-    params = (int(el) for el in params)
-    return datetime(*params).isoformat()
 
 
 async def analyse_report(path):
