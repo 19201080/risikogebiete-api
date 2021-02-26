@@ -19,7 +19,3 @@ def parse_data_for_csv(data):
 
 def parse_data_for_json(data):
     return {timestamp: countries for timestamp, countries in data}
-
-
-if __name__ == '__main__':
-    print('->', get_path_from_root('downloads'))
