@@ -16,7 +16,7 @@ The list of parsed reports is updated every day at midnight German time (GMT+1).
 
 ## Format
 ### Dates
-The dates and times of each report are given in the ISO 8601 format. When the time is mentioned on the report it is added, otherwise it is left as 00:00:00
+The dates and times of each report are given in the ISO 8601 format (YYYY-MM-DDTHH-MM-SS).
 
 ### Countries
 The reports parsed are the ones in German, but the countries are provided in English, along with their respective iso3166 codes (alpha 2, alpha 3 and numeric).
