@@ -113,7 +113,12 @@ def slice_from_line(text, *lines, reverse=False):
                      if el >= 0]
     if not found_indexes:
         return text
-    return text[min(found_indexes):] if reverse else text[:min(found_indexes)]
+    first_index = min(found_indexes)
+    if reverse:
+        line_end = text.find('\n', first_index)
+        return text[line_end:]
+    line_beginning = text.rfind('\n', 0, first_index)
+    return text[:line_beginning]
 
 
 def extract_bullet_list(text):
