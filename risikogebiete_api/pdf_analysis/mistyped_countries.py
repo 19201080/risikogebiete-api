@@ -5,6 +5,8 @@ import re
 
 
 def parse_mistyped_countries(country, country_codes):
+    if re.match(r'Andorra', country):
+        return country_codes['Andorra']
     if re.match(r'Bosni(a|en) [au]nd Herzego[vw]ina', country):
         return country_codes['Bosnien und Herzegowina']
     if re.match(r'Brunei', country):
@@ -23,6 +25,8 @@ def parse_mistyped_countries(country, country_codes):
         return country_codes['Nordkorea']
     if re.match(r'Kosovo', country):
         return 'XK'
+    if re.match(r'Moldau', country):
+        return country_codes['Republik Moldau']
     if re.match(r'Palästinensische\s+(Autonomieg|G)ebiete', country):
         return country_codes['Palästinensische Autonomiegebiete']
     if re.match(r'Papua‐Neuguinea', country):
