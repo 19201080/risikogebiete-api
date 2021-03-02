@@ -21,13 +21,16 @@ from pdfminer.pdfpage import PDFPage
 from pdfminer.pdfparser import PDFParser
 
 
-def extract_pdf_data(filename):
+def extract_pdf_data(filename, **custom_params):
     output_string = StringIO()
     with open(filename, 'rb') as in_file:
         parser = PDFParser(in_file)
         doc = PDFDocument(parser)
         rsrcmgr = PDFResourceManager()
-        laparams = LAParams(char_margin=4.0)
+        params = {'char_margin': 4.0,
+                  'boxes_flow': None,
+                  **custom_params}
+        laparams = LAParams(**params)
         device = TextConverter(rsrcmgr, output_string, laparams=laparams)
         interpreter = PDFPageInterpreter(rsrcmgr, device)
         for page in PDFPage.create_pages(doc):
