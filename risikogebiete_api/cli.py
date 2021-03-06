@@ -3,6 +3,7 @@
 
 import asyncio
 import logging
+import logging.config
 import os
 import sys
 
@@ -24,7 +25,7 @@ from risikogebiete_api.report_export.complete_report \
     import save_complete_report
 from risikogebiete_api.utils import get_path_from_root
 from risikogebiete_api.constants \
-    import INDIVIDUAL_REPORTS, FILES, DATA, ROOT_URL, URL
+    import INDIVIDUAL_REPORTS, FILES, DATA, ROOT_URL, URL, LOGGING_CONFIG
 
 logger = logging.getLogger(__name__)
 LOG_FORMAT = ('%(asctime)-15s [%(levelname)-7s]: '
@@ -74,9 +75,11 @@ def main(debug):
     logging.getLogger('pdfminer').setLevel(logging.WARNING)
     logging.getLogger('urllib3').setLevel(logging.WARNING)
     logging.getLogger('asyncio').setLevel(logging.WARNING)
-    logging.basicConfig(
-        format=LOG_FORMAT,
-        level=logging.DEBUG if debug else logging.INFO)
+    logging_defaults = {'custom_level': 'DEBUG' if debug else 'INFO'}
+    logging.config.fileConfig(fname=LOGGING_CONFIG,
+                              defaults=logging_defaults,
+                              disable_existing_loggers=False)
+    logger.debug('debug test')
     try:
         loop = asyncio.get_event_loop()
         loop.run_until_complete(get_reports())
