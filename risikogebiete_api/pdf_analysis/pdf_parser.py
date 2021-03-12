@@ -47,10 +47,11 @@ def find_complex_case(element):
 
 
 def extract_country(element):
-    pattern = re.compile(r'(.+)?\(.*\d+.\s?\w+\)?')
+    parenthesis_pattern = re.compile(r'(\([^\d\)]*\s?\d+\.?\s?[^\)]+(\)|$))')
     element = element.replace('\n', '')
-    if found_country := pattern.findall(element):
-        element = found_country[0].replace('gesamt', '')
+    if found_parenthesis := parenthesis_pattern.search(element):
+        element = element[:found_parenthesis.start()]
+        element = element.replace('gesamt', '')
     if separators := find_complex_case(element):
         first_separator = separators[0]
         return element[:first_separator].strip()
