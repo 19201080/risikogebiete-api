@@ -1,0 +1,60 @@
+name: update-results
+
+on:
+    schedule:
+        - cron: '23 0 * * *'
+    worflow_dispatch:
+
+jobs:
+    update-results:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+            - name: Set up python
+              uses: actions/setup-python@v2
+            - name: Install dependencies
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install -r requirements_dev.txt
+                  pip install .
+            - name: Run API
+              run: |
+                  python -m risikogebiete_api.cli
+            - name: save git status
+              run: |
+                  echo "GIT_STATUS<<EOF" >> $GITHUB_ENV
+                  git status >> $GITHUB_ENV
+                  echo "EOF" >> $GITHUB_ENV
+            - name: save log content
+              run: |
+                  echo "LOG_CONTENT<<EOF" >> $GITHUB_ENV
+                  cat log.log >> $GITHUB_ENV
+                  echo "EOF" >> $GITHUB_ENV
+            - name: check for warnings in log
+              run: |
+                  echo "WARNING_IN_LOG=${{ contains(env.LOG_CONTENT, 'WARNING') }}" >> $GITHUB_ENV
+            - name: check for new files
+              run: |
+                  echo "NEW_FILES=${{ !contains(env.GIT_STATUS, 'nothing to commit') }}" >> $GITHUB_ENV
+            - name: push
+              uses: github-actions-x/commit@v2.7
+              if: env.NEW_FILES == 'true'
+              with:
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  push-branch: 'main'
+                  commit-message: 'Update the reports'
+                  force-add: 'true'
+                  files: files/
+                  name: github-actions
+                  email: actions@github.com
+            - name: upload log if warnings
+              if: env.WARNING_IN_LOG == 'true'
+              uses: actions/upload-artifact@v2
+              with:
+                  name: log-file
+                  path: log.log
+            - name: fail if warnings
+              if: env.WARNING_IN_LOG == 'true'
+              run: |
+                  exit 1
