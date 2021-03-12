@@ -20,7 +20,7 @@ jobs:
                   pip install .
             - name: Run API
               run: |
-                  python -m risikogebiete_api.cli
+                  python -m risikogebiete_api.cli -d
             - name: save git status
               run: |
                   echo "GIT_STATUS<<EOF" >> $GITHUB_ENV
