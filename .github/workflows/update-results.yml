@@ -3,7 +3,7 @@ name: update-results
 on:
     schedule:
         - cron: '23 0 * * *'
-    worflow_dispatch:
+    workflow_dispatch:
 
 jobs:
     update-results:
