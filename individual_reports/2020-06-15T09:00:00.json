@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Armenia",
+    "alpha2": "AM",
+    "alpha3": "ARM",
+    "numeric": "051"
+  },
+  {
+    "name": "Bahrain",
+    "alpha2": "BH",
+    "alpha3": "BHR",
+    "numeric": "048"
+  },
+  {
+    "name": "Belarus",
+    "alpha2": "BY",
+    "alpha3": "BLR",
+    "numeric": "112"
+  },
+  {
+    "name": "Brazil",
+    "alpha2": "BR",
+    "alpha3": "BRA",
+    "numeric": "076"
+  },
+  {
+    "name": "Chile",
+    "alpha2": "CL",
+    "alpha3": "CHL",
+    "numeric": "152"
+  },
+  {
+    "name": "Kuwait",
+    "alpha2": "KW",
+    "alpha3": "KWT",
+    "numeric": "414"
+  },
+  {
+    "name": "Oman",
+    "alpha2": "OM",
+    "alpha3": "OMN",
+    "numeric": "512"
+  },
+  {
+    "name": "Panama",
+    "alpha2": "PA",
+    "alpha3": "PAN",
+    "numeric": "591"
+  },
+  {
+    "name": "Peru",
+    "alpha2": "PE",
+    "alpha3": "PER",
+    "numeric": "604"
+  },
+  {
+    "name": "Qatar",
+    "alpha2": "QA",
+    "alpha3": "QAT",
+    "numeric": "634"
+  },
+  {
+    "name": "Saudi Arabia",
+    "alpha2": "SA",
+    "alpha3": "SAU",
+    "numeric": "682"
+  },
+  {
+    "name": "Sweden",
+    "alpha2": "SE",
+    "alpha3": "SWE",
+    "numeric": "752"
+  }
+]
