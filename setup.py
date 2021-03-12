@@ -9,14 +9,14 @@ with open('README.md') as readme_file:
 
 requirements = [
     'Click>=7.0',
-    'pdfminer.six',
-    'requests',
-    'beautifulsoup4',
-    'aiofiles',
-    'aiohttp',
-    'country_list',
-    'iso3166',
-    'aiocsv',
+    'pdfminer.six==20201018',
+    'requests==2.25.1',
+    'beautifulsoup4==4.9.3',
+    'aiofiles==0.6.0',
+    'aiohttp==3.7.4',
+    'country_list==0.2.1',
+    'iso3166==1.0.1',
+    'aiocsv==1.1.1',
 ]
 
 setup_requirements = ['pytest-runner', ]
