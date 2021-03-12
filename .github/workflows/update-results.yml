@@ -45,7 +45,7 @@ jobs:
                   push-branch: 'main'
                   commit-message: 'Update the reports'
                   force-add: 'true'
-                  files: files/
+                  files: data.csv data.json individual_reports/
                   name: github-actions
                   email: actions@github.com
             - name: upload log if warnings
