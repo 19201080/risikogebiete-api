@@ -1,0 +1,10 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.3.0
+    hooks:
+      - id: no-commit-to-branch
+        args: [--pattern, '^(?!((develop)$)|((fix|feature)\/[a-zA-Z0-9\_]+)$).*']
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.8.4
+    hooks:
+      - id: flake8
