@@ -79,7 +79,7 @@ def main(debug):
     logging.config.fileConfig(fname=LOGGING_CONFIG,
                               defaults=logging_defaults,
                               disable_existing_loggers=False)
-    logger.debug('debug test')
+
     try:
         loop = asyncio.get_event_loop()
         loop.run_until_complete(get_reports())
