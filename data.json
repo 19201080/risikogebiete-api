@@ -48901,10 +48901,10 @@
       "numeric": "250"
     },
     {
-      "alpha2": null,
-      "alpha3": null,
-      "name": "Frankreich inkl. aller \u00dcbersee-Departments",
-      "numeric": null
+      "alpha2": "FR",
+      "alpha3": "FRA",
+      "name": "France",
+      "numeric": "250"
     },
     {
       "alpha2": "GA",
