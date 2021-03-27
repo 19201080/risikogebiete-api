@@ -324,10 +324,10 @@
     "numeric": "250"
   },
   {
-    "name": "Frankreich inkl. aller \u00dcbersee-Departments",
-    "alpha2": null,
-    "alpha3": null,
-    "numeric": null
+    "name": "France",
+    "alpha2": "FR",
+    "alpha3": "FRA",
+    "numeric": "250"
   },
   {
     "name": "Gabon",

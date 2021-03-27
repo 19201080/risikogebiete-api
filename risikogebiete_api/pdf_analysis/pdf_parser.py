@@ -52,6 +52,7 @@ def extract_country(element):
     if found_parenthesis := parenthesis_pattern.search(element):
         element = element[:found_parenthesis.start()]
         element = element.replace('gesamt', '')
+        element = re.sub(r'inkl\..*', '', element)
     if separators := find_complex_case(element):
         first_separator = separators[0]
         return element[:first_separator].strip()
