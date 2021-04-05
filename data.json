@@ -4809,12 +4809,6 @@
       "numeric": "132"
     },
     {
-      "alpha2": "CV",
-      "alpha3": "CPV",
-      "name": "Cabo Verde",
-      "numeric": "132"
-    },
-    {
       "alpha2": "CM",
       "alpha3": "CMR",
       "name": "Cameroon",
@@ -41711,12 +41705,6 @@
       "numeric": "040"
     },
     {
-      "alpha2": "AT",
-      "alpha3": "AUT",
-      "name": "Austria",
-      "numeric": "040"
-    },
-    {
       "alpha2": "AZ",
       "alpha3": "AZE",
       "name": "Azerbaijan",
@@ -42697,12 +42685,6 @@
       "numeric": "040"
     },
     {
-      "alpha2": "AT",
-      "alpha3": "AUT",
-      "name": "Austria",
-      "numeric": "040"
-    },
-    {
       "alpha2": "AZ",
       "alpha3": "AZE",
       "name": "Azerbaijan",
@@ -43675,12 +43657,6 @@
       "alpha3": "ARM",
       "name": "Armenia",
       "numeric": "051"
-    },
-    {
-      "alpha2": "AT",
-      "alpha3": "AUT",
-      "name": "Austria",
-      "numeric": "040"
     },
     {
       "alpha2": "AT",
@@ -44675,12 +44651,6 @@
       "numeric": "040"
     },
     {
-      "alpha2": "AT",
-      "alpha3": "AUT",
-      "name": "Austria",
-      "numeric": "040"
-    },
-    {
       "alpha2": "AZ",
       "alpha3": "AZE",
       "name": "Azerbaijan",
@@ -44949,12 +44919,6 @@
       "alpha3": "FIN",
       "name": "Finland",
       "numeric": "246"
-    },
-    {
-      "alpha2": "FR",
-      "alpha3": "FRA",
-      "name": "France",
-      "numeric": "250"
     },
     {
       "alpha2": "FR",
@@ -45673,12 +45637,6 @@
       "numeric": "040"
     },
     {
-      "alpha2": "AT",
-      "alpha3": "AUT",
-      "name": "Austria",
-      "numeric": "040"
-    },
-    {
       "alpha2": "AZ",
       "alpha3": "AZE",
       "name": "Azerbaijan",
@@ -45947,12 +45905,6 @@
       "alpha3": "FIN",
       "name": "Finland",
       "numeric": "246"
-    },
-    {
-      "alpha2": "FR",
-      "alpha3": "FRA",
-      "name": "France",
-      "numeric": "250"
     },
     {
       "alpha2": "FR",
@@ -46671,12 +46623,6 @@
       "numeric": "040"
     },
     {
-      "alpha2": "AT",
-      "alpha3": "AUT",
-      "name": "Austria",
-      "numeric": "040"
-    },
-    {
       "alpha2": "AZ",
       "alpha3": "AZE",
       "name": "Azerbaijan",
@@ -46939,12 +46885,6 @@
       "alpha3": "FIN",
       "name": "Finland",
       "numeric": "246"
-    },
-    {
-      "alpha2": "FR",
-      "alpha3": "FRA",
-      "name": "France",
-      "numeric": "250"
     },
     {
       "alpha2": "FR",
@@ -47663,12 +47603,6 @@
       "numeric": "040"
     },
     {
-      "alpha2": "AT",
-      "alpha3": "AUT",
-      "name": "Austria",
-      "numeric": "040"
-    },
-    {
       "alpha2": "AZ",
       "alpha3": "AZE",
       "name": "Azerbaijan",
@@ -47931,12 +47865,6 @@
       "alpha3": "FIN",
       "name": "Finland",
       "numeric": "246"
-    },
-    {
-      "alpha2": "FR",
-      "alpha3": "FRA",
-      "name": "France",
-      "numeric": "250"
     },
     {
       "alpha2": "FR",
@@ -48455,6 +48383,12 @@
       "numeric": "740"
     },
     {
+      "alpha2": "SE",
+      "alpha3": "SWE",
+      "name": "Sweden",
+      "numeric": "752"
+    },
+    {
       "alpha2": "CH",
       "alpha3": "CHE",
       "name": "Switzerland",
@@ -48893,12 +48827,6 @@
       "alpha3": "FIN",
       "name": "Finland",
       "numeric": "246"
-    },
-    {
-      "alpha2": "FR",
-      "alpha3": "FRA",
-      "name": "France",
-      "numeric": "250"
     },
     {
       "alpha2": "FR",
@@ -49875,12 +49803,6 @@
       "numeric": "250"
     },
     {
-      "alpha2": "FR",
-      "alpha3": "FRA",
-      "name": "France",
-      "numeric": "250"
-    },
-    {
       "alpha2": "GA",
       "alpha3": "GAB",
       "name": "Gabon",
@@ -50841,12 +50763,6 @@
       "alpha3": "FIN",
       "name": "Finland",
       "numeric": "246"
-    },
-    {
-      "alpha2": "FR",
-      "alpha3": "FRA",
-      "name": "France",
-      "numeric": "250"
     },
     {
       "alpha2": "FR",
