@@ -76,7 +76,7 @@ def main(debug):
     logging.getLogger('urllib3').setLevel(logging.WARNING)
     logging.getLogger('asyncio').setLevel(logging.WARNING)
     logging_defaults = {'custom_level': 'DEBUG' if debug else 'INFO'}
-    logging.config.fileConfig(fname=LOGGING_CONFIG,
+    logging.config.fileConfig(fname=get_path_from_root(LOGGING_CONFIG),
                               defaults=logging_defaults,
                               disable_existing_loggers=False)
 
