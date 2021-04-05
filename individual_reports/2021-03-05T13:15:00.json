@@ -54,12 +54,6 @@
     "numeric": "040"
   },
   {
-    "name": "Austria",
-    "alpha2": "AT",
-    "alpha3": "AUT",
-    "numeric": "040"
-  },
-  {
     "name": "Azerbaijan",
     "alpha2": "AZ",
     "alpha3": "AZE",
@@ -328,12 +322,6 @@
     "alpha2": "FI",
     "alpha3": "FIN",
     "numeric": "246"
-  },
-  {
-    "name": "France",
-    "alpha2": "FR",
-    "alpha3": "FRA",
-    "numeric": "250"
   },
   {
     "name": "France",
