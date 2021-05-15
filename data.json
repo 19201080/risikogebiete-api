@@ -57174,5 +57174,31 @@
       "name": "Spezielle Test",
       "numeric": null
     }
+  ],
+  "2021-05-14T17:30:00": [
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Bei Einreise aus sogenannten Virusvarianten-Gebieten gilt ein Bef\u00f6rderungsverbot f\u00fcr den Personenverkehr per Zug, Bus, Schiff und Flug aus diesen L\u00e4ndern.",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Eine generelle Testnachweispflicht f\u00fcr Einreisende im Luftverkehr. Personen die mit dem Flugzeug einreisen, m\u00fcssen grunds\u00e4tzlich",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Impf",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Spezielle Test",
+      "numeric": null
+    }
   ]
 }
