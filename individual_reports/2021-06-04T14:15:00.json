@@ -1,0 +1,908 @@
+[
+  {
+    "name": "Afghanistan",
+    "alpha2": "AF",
+    "alpha3": "AFG",
+    "numeric": "004"
+  },
+  {
+    "name": "Algeria",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Andorra",
+    "alpha2": "AD",
+    "alpha3": "AND",
+    "numeric": "020"
+  },
+  {
+    "name": "Angola",
+    "alpha2": "AO",
+    "alpha3": "AGO",
+    "numeric": "024"
+  },
+  {
+    "name": "Argentina",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Armenia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Austria",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Azerbaijan",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Bahamas",
+    "alpha2": "BS",
+    "alpha3": "BHS",
+    "numeric": "044"
+  },
+  {
+    "name": "Bahrain",
+    "alpha2": "BH",
+    "alpha3": "BHR",
+    "numeric": "048"
+  },
+  {
+    "name": "Bangladesh",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Belarus",
+    "alpha2": "BY",
+    "alpha3": "BLR",
+    "numeric": "112"
+  },
+  {
+    "name": "Belgium",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Belize",
+    "alpha2": "BZ",
+    "alpha3": "BLZ",
+    "numeric": "084"
+  },
+  {
+    "name": "Benin",
+    "alpha2": "BJ",
+    "alpha3": "BEN",
+    "numeric": "204"
+  },
+  {
+    "name": "Bhutan",
+    "alpha2": "BT",
+    "alpha3": "BTN",
+    "numeric": "064"
+  },
+  {
+    "name": "Bolivia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "alpha2": "BA",
+    "alpha3": "BIH",
+    "numeric": "070"
+  },
+  {
+    "name": "Botswana",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Brazil",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Burkina Faso",
+    "alpha2": "BF",
+    "alpha3": "BFA",
+    "numeric": "854"
+  },
+  {
+    "name": "Burundi",
+    "alpha2": "BI",
+    "alpha3": "BDI",
+    "numeric": "108"
+  },
+  {
+    "name": "Cameroon",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Canada",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Cape Verde",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Central African Republic",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Chad",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Chile",
+    "alpha2": "CL",
+    "alpha3": "CHL",
+    "numeric": "152"
+  },
+  {
+    "name": "Columbia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Comoros",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Costa Rica",
+    "alpha2": "CR",
+    "alpha3": "CRI",
+    "numeric": "188"
+  },
+  {
+    "name": "Croatia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Cuba",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Currently no agreements within the meaning of section 6 (2) sentence 1 number 2 of the Ordinance on Coronavirus Entry Regulations exist with other countries.   For more information on the foregoing obligations, exemptions and requirements regarding the relevant proof, go to",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Cyprus",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "C\u00f4te d'Ivoire",
+    "alpha2": "CI",
+    "alpha3": "CIV",
+    "numeric": "384"
+  },
+  {
+    "name": "DR Congo",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Denmark",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Djibouti",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Dominican Republic",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Ecuador",
+    "alpha2": "EC",
+    "alpha3": "ECU",
+    "numeric": "218"
+  },
+  {
+    "name": "Egypt",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "El Salvador",
+    "alpha2": "SV",
+    "alpha3": "SLV",
+    "numeric": "222"
+  },
+  {
+    "name": "Ending quarantine",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Equatorial Guinea",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Eritrea",
+    "alpha2": "ER",
+    "alpha3": "ERI",
+    "numeric": "232"
+  },
+  {
+    "name": "Estonia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Eswatini",
+    "alpha2": "SZ",
+    "alpha3": "SWZ",
+    "numeric": "748"
+  },
+  {
+    "name": "Ethiopia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "For travellers entering Germany from so-called areas of virus variants of concern, a ban on carriage applies to the transport of persons from those countries into Germany by rail, bus, ship or plane. Special agreements under section 6 (2) sentence 1 number 2 of the Ordinance on Coronavirus Entry Regulations between the Federal Republic of Germany and national governments on site:",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "France",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Gabon",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Gambia",
+    "alpha2": "GM",
+    "alpha3": "GMB",
+    "numeric": "270"
+  },
+  {
+    "name": "Georgia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Ghana",
+    "alpha2": "GH",
+    "alpha3": "GHA",
+    "numeric": "288"
+  },
+  {
+    "name": "Greece",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Guatemala",
+    "alpha2": "GT",
+    "alpha3": "GTM",
+    "numeric": "320"
+  },
+  {
+    "name": "Guinea",
+    "alpha2": "GN",
+    "alpha3": "GIN",
+    "numeric": "324"
+  },
+  {
+    "name": "Guinea-Bissau",
+    "alpha2": "GW",
+    "alpha3": "GNB",
+    "numeric": "624"
+  },
+  {
+    "name": "Guyana",
+    "alpha2": "GY",
+    "alpha3": "GUY",
+    "numeric": "328"
+  },
+  {
+    "name": "Haiti",
+    "alpha2": "HT",
+    "alpha3": "HTI",
+    "numeric": "332"
+  },
+  {
+    "name": "Honduras",
+    "alpha2": "HN",
+    "alpha3": "HND",
+    "numeric": "340"
+  },
+  {
+    "name": "India",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Indonesia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Iran, Islamic Republic of",
+    "alpha2": "IR",
+    "alpha3": "IRN",
+    "numeric": "364"
+  },
+  {
+    "name": "Iraq",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Ireland",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Jordan",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Kazakhstan",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Kenya",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Korea, Democratic People's Republic of",
+    "alpha2": "KP",
+    "alpha3": "PRK",
+    "numeric": "408"
+  },
+  {
+    "name": "Kosovo",
+    "alpha2": "XK",
+    "alpha3": "XKX",
+    "numeric": "983"
+  },
+  {
+    "name": "Kuwait",
+    "alpha2": "KW",
+    "alpha3": "KWT",
+    "numeric": "414"
+  },
+  {
+    "name": "Kyrgyzstan",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Latvia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Lebanon",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Lesotho",
+    "alpha2": "LS",
+    "alpha3": "LSO",
+    "numeric": "426"
+  },
+  {
+    "name": "Liberia",
+    "alpha2": "LR",
+    "alpha3": "LBR",
+    "numeric": "430"
+  },
+  {
+    "name": "Libya",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Lithuania",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Luxembourg",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Madagascar",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Malawi",
+    "alpha2": "MW",
+    "alpha3": "MWI",
+    "numeric": "454"
+  },
+  {
+    "name": "Malaysia",
+    "alpha2": "MY",
+    "alpha3": "MYS",
+    "numeric": "458"
+  },
+  {
+    "name": "Maldives",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Mali",
+    "alpha2": "ML",
+    "alpha3": "MLI",
+    "numeric": "466"
+  },
+  {
+    "name": "Mauritania",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Mexico",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Moldova, Republic of",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Mongolia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Montenegro",
+    "alpha2": "ME",
+    "alpha3": "MNE",
+    "numeric": "499"
+  },
+  {
+    "name": "Morocco",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Mozambique",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Namibia",
+    "alpha2": "NA",
+    "alpha3": "NAM",
+    "numeric": "516"
+  },
+  {
+    "name": "Nepal",
+    "alpha2": "NP",
+    "alpha3": "NPL",
+    "numeric": "524"
+  },
+  {
+    "name": "Netherlands incl. the autonomous countries",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Nicaragua",
+    "alpha2": "NI",
+    "alpha3": "NIC",
+    "numeric": "558"
+  },
+  {
+    "name": "Niger",
+    "alpha2": "NE",
+    "alpha3": "NER",
+    "numeric": "562"
+  },
+  {
+    "name": "Nigeria",
+    "alpha2": "NG",
+    "alpha3": "NGA",
+    "numeric": "566"
+  },
+  {
+    "name": "North Macedonia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Norway",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Obligation to furnish proof",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Obligation to quarantine: Travellers who have spent time in a risk area, must make their way directly to their home",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Oman",
+    "alpha2": "OM",
+    "alpha3": "OMN",
+    "numeric": "512"
+  },
+  {
+    "name": "Pakistan",
+    "alpha2": "PK",
+    "alpha3": "PAK",
+    "numeric": "586"
+  },
+  {
+    "name": "Palestinian territories",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Panama",
+    "alpha2": "PA",
+    "alpha3": "PAN",
+    "numeric": "591"
+  },
+  {
+    "name": "Papua New Guinea",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Paraguay",
+    "alpha2": "PY",
+    "alpha3": "PRY",
+    "numeric": "600"
+  },
+  {
+    "name": "Peru",
+    "alpha2": "PE",
+    "alpha3": "PER",
+    "numeric": "604"
+  },
+  {
+    "name": "Philippines",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Portugal",
+    "alpha2": "PT",
+    "alpha3": "PRT",
+    "numeric": "620"
+  },
+  {
+    "name": "Qatar",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Registration required",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Republic of the Congo",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Russian Federation",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Saint Lucia",
+    "alpha2": "LC",
+    "alpha3": "LCA",
+    "numeric": "662"
+  },
+  {
+    "name": "Saudi Arabia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Senegal",
+    "alpha2": "SN",
+    "alpha3": "SEN",
+    "numeric": "686"
+  },
+  {
+    "name": "Serbia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Seychelles",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Sierra Leone",
+    "alpha2": "SL",
+    "alpha3": "SLE",
+    "numeric": "694"
+  },
+  {
+    "name": "Slovenia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Somalia",
+    "alpha2": "SO",
+    "alpha3": "SOM",
+    "numeric": "706"
+  },
+  {
+    "name": "South Africa",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "South Sudan",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Spain",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Sri Lanka",
+    "alpha2": "LK",
+    "alpha3": "LKA",
+    "numeric": "144"
+  },
+  {
+    "name": "Sudan",
+    "alpha2": "SD",
+    "alpha3": "SDN",
+    "numeric": "729"
+  },
+  {
+    "name": "Suriname",
+    "alpha2": "SR",
+    "alpha3": "SUR",
+    "numeric": "740"
+  },
+  {
+    "name": "Sweden",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Switzerland",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Syrian Arab Republic",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Tajikistan",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Tanzania",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Timor Leste (East Timor)",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Togo",
+    "alpha2": "TG",
+    "alpha3": "TGO",
+    "numeric": "768"
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Tunisia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Turkey",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Turkmenistan",
+    "alpha2": "TM",
+    "alpha3": "TKM",
+    "numeric": "795"
+  },
+  {
+    "name": "Ukraine",
+    "alpha2": "UA",
+    "alpha3": "UKR",
+    "numeric": "804"
+  },
+  {
+    "name": "United Arab Emirates",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "United Kingdom of Great Britain and Northern Ireland incl. all British Overseas Territories, Isle of Man and the Channel Islands",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "United States of America",
+    "alpha2": "US",
+    "alpha3": "USA",
+    "numeric": "840"
+  },
+  {
+    "name": "Uruguay",
+    "alpha2": "UY",
+    "alpha3": "URY",
+    "numeric": "858"
+  },
+  {
+    "name": "Uzbekistan",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Venezuela, Bolivarian Republic of",
+    "alpha2": "VE",
+    "alpha3": "VEN",
+    "numeric": "862"
+  },
+  {
+    "name": "Yemen",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Zambia",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  },
+  {
+    "name": "Zimbabwe",
+    "alpha2": null,
+    "alpha3": null,
+    "numeric": null
+  }
+]
