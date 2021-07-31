@@ -58476,5 +58476,67 @@
       "name": "Quarant\u00e4nepflicht: Personen, die sich in einem Risikogebiet aufgehalten haben, m\u00fcssen sich grunds\u00e4tzlich direkt nach Ankunft nach Hause",
       "numeric": null
     }
+  ],
+  "2021-07-30T18:45:00": [
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Anmeldepflicht",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Beendigung der Quarant\u00e4ne",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Bei Einreise aus sogenannten Virusvariantengebieten gilt ein Bef\u00f6rderungsverbot f\u00fcr den Personenverkehr per Zug, Bus, Schiff und Flug aus diesen Staaten. Besondere Vereinbarungen zwischen der Bundesrepublik Deutschland und nationalen Regierungen vor Ort nach \u00a7 6 Absatz 2 Satz 1 Nummer 2 Coronavirus-Einreiseverordnung:",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Bei Einreise nach Voraufenthalt in einem einfachen Risikogebiet m\u00fcssen Reisende sp\u00e4testens 48 Stunden nach Einreise ein negatives Testergebnis, einen Impf",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Derzeit bestehen keine Vereinbarungen mit anderen Staaten im Sinne von \u00a7 6 Absatz 2 Satz 1 Nummer 2 Coronavirus-Einreiseverordnung.   N\u00e4here Informationen zu den genannten Pflichten, Ausnahmen sowie Voraussetzungen zu den jeweiligen Nachweisen finden Sie unter",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Die Nachweise m\u00fcssen \u00fcber das Einreiseportal unter https://einreiseanmeldung.de hochgeladen werden.",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Es besteht aktuell keine Feststellung gem\u00e4\u00df \u00a7 4 Absatz 2 Satz 5 Corona-Einreiseverordnung durch das RKI, dass ein bestimmter Impfstoff gegen die Virusvariante hinreichend wirksam w\u00e4re, die zur Einstufung des Gebiets als Virusvariantengebiet gef\u00fchrt hat. Eine Ausnahme von der Quarant\u00e4nepflicht f\u00fcr vollst\u00e4ndig geimpfte Personen nach Voraufenthalt in einem Virusvariantengebiet besteht demnach nicht.",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Quarant\u00e4nepflicht: Personen, die sich in einem Risikogebiet aufgehalten haben, m\u00fcssen sich grunds\u00e4tzlich direkt nach Ankunft nach Hause",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Reisende nach Voraufenthalt in einem Hochinzidenz",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Spezielle Nachweispflicht:",
+      "numeric": null
+    }
   ]
 }
