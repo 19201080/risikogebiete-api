@@ -58538,5 +58538,67 @@
       "name": "Spezielle Nachweispflicht:",
       "numeric": null
     }
+  ],
+  "2021-08-02T11:30:00": [
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Anmeldepflicht",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Beendigung der Quarant\u00e4ne: Die h\u00e4usliche Quarant\u00e4ne kann vorzeitig beendet werden, wenn ein Genesenennachweis, ein Impfnachweis oder ein negativer Testnachweis \u00fcber das Einreiseportal der Bundesrepublik unter https://www.einreiseanmeldung.de \u00fcbermittelt wird. Die Quarant\u00e4ne kann jeweils ab dem Zeitpunkt der \u00dcbermittlung beendet werden. Nach Voraufenthalt in Hochrisikogebieten kann eine Testung fr\u00fchestens f\u00fcnf Tage nach Einreise vorgenommen werden (\u201eFreitestung\u201c ab Tag f\u00fcnf nach Einreise m\u00f6glich). Geimpfte und Genesene k\u00f6nnen die Quarant\u00e4ne ab dem Zeitpunkt beenden, an dem der Impf",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Bei Einreise aus sogenannten Virusvariantengebieten gilt ein Bef\u00f6rderungsverbot f\u00fcrden Personenverkehr per Zug, Bus, Schiff und Flug aus diesen Staaten.Besondere Vereinbarungen zwischen der Bundesrepublik Deutschland und nationalen Regierungen vor Ort nach \u00a7 6 Absatz 2 Satz 1 Nummer 2 Coronavirus-Einreiseverordnung:",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Derzeit bestehen keine Vereinbarungen mit anderen Staaten im Sinne von \u00a7 6 Absatz 2Satz 1 Nummer 2 Coronavirus-Einreiseverordnung.N\u00e4here Informationen zu den genannten Pflichten, Ausnahmen sowie Voraussetzungen zu den jeweiligen Nachweisen finden Sie unter",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Die Nachweise m\u00fcssen \u00fcber das Einreiseportal unter https://einreiseanmeldung.de hochgeladen werden.",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Es besteht aktuell keine Feststellung gem\u00e4\u00df \u00a7 4 Absatz 2 Satz 5 Corona-Einreiseverordnung durch das RKI, dass ein bestimmter Impfstoff gegen die Virusvariante hinreichend wirksam w\u00e4re, die zur Einstufung des Gebiets als Virusvariantengebiet gef\u00fchrt hat. Eine Ausnahme von der Quarant\u00e4nepflicht f\u00fcr vollst\u00e4ndig geimpfte Personen nach Voraufenthalt in einem Virusvariantengebiet besteht demnach nicht.",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Nach Aufenthalt in Virusvariantengebieten dauert die Quarant\u00e4ne 14 Tage und eine vorzeitige Beendigung der Quarant\u00e4ne ist grunds\u00e4tzlich nicht m\u00f6glich.",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Quarant\u00e4nepflicht: Personen, die sich in einem Risikogebiet aufgehalten haben, m\u00fcssen sich grunds\u00e4tzlich direkt nach Ankunft nach Hause",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Reisende nach Voraufenthalt in einem Hochrisikogebiets m\u00fcssen einen Test-, Impf",
+      "numeric": null
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Spezielle Nachweispflicht:",
+      "numeric": null
+    }
   ]
 }
