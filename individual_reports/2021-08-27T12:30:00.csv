@@ -1,0 +1,75 @@
+name,alpha2,alpha3,numeric
+Algeria,DZ,DZA,012
+Argentina,AR,ARG,032
+Bangladesh,BD,BGD,050
+"Bolivia, Plurinational State of",BO,BOL,068
+Botswana,BW,BWA,072
+Brazil,BR,BRA,076
+Colombia,CO,COL,170
+Costa Rica,CR,CRI,188
+Cuba,CU,CUB,192
+Cyprus,CY,CYP,196
+Dominica,DM,DMA,212
+Ecuador,EC,ECU,218
+Egypt,EG,EGY,818
+Eswatini,SZ,SWZ,748
+Fiji,FJ,FJI,242
+France,FR,FRA,250
+Georgia,GE,GEO,268
+Greece,GR,GRC,300
+Haiti,HT,HTI,332
+Honduras,HN,HND,340
+India,IN,IND,356
+Indonesia,ID,IDN,360
+"Iran, Islamic Republic of",IR,IRN,364
+Iraq,IQ,IRQ,368
+Ireland,IE,IRL,372
+Israel,IL,ISR,376
+Jamaica,JM,JAM,388
+Kazakhstan,KZ,KAZ,398
+Kenya,KE,KEN,404
+"Korea, Democratic People's Republic of",KP,PRK,408
+Kosovo,XK,XKX,983
+Kuwait,KW,KWT,414
+Lesotho,LS,LSO,426
+Libya,LY,LBY,434
+Malawi,MW,MWI,454
+Malaysia,MY,MYS,458
+Mexico,MX,MEX,484
+Mongolia,MN,MNG,496
+Montenegro,ME,MNE,499
+Morocco,MA,MAR,504
+Mozambique,MZ,MOZ,508
+Myanmar,MM,MMR,104
+Namibia,NA,NAM,516
+Nepal,NP,NPL,524
+Netherlands,NL,NLD,528
+North Macedonia,MK,MKD,807
+Oman,OM,OMN,512
+Papua New Guinea,PG,PNG,598
+Paraguay,PY,PRY,600
+Peru,PE,PER,604
+Philippines,PH,PHL,608
+Portugal,PT,PRT,620
+Russian Federation,RU,RUS,643
+Saint Kitts and Nevis,KN,KNA,659
+Saint Lucia,LC,LCA,662
+Senegal,SN,SEN,686
+Seychelles,SC,SYC,690
+South Africa,ZA,ZAF,710
+Sudan,SD,SDN,729
+Suriname,SR,SUR,740
+Syrian Arab Republic,SY,SYR,760
+Tajikistan,TJ,TJK,762
+"Tanzania, United Republic of",TZ,TZA,834
+Thailand,TH,THA,764
+Trinidad and Tobago,TT,TTO,780
+Tunisia,TN,TUN,788
+Turkey,TR,TUR,792
+Turkmenistan,TM,TKM,795
+United Kingdom of Great Britain and Northern Ireland,GB,GBR,826
+Uzbekistan,UZ,UZB,860
+Vereinigte Staaten von Amerika,,,
+Viet Nam,VN,VNM,704
+Zambia,ZM,ZMB,894
+Zimbabwe,ZW,ZWE,716
