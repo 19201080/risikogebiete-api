@@ -1,0 +1,64 @@
+name,alpha2,alpha3,numeric
+Andorra,AD,AND,020
+Austria,AT,AUT,040
+Barbados,BB,BRB,052
+Belarus,BY,BLR,112
+Belgium,BE,BEL,056
+Belize,BZ,BLZ,084
+Bosnia and Herzegovina,BA,BIH,070
+Botswana,BW,BWA,072
+Burundi,BI,BDI,108
+Cameroon,CM,CMR,120
+Croatia,HR,HRV,191
+Dominica,DM,DMA,212
+Dänemark inklusive der Färöer und Grönland,,,
+Egypt,EG,EGY,818
+Eswatini,SZ,SWZ,748
+Ethiopia,ET,ETH,231
+Frankreich inklusive des Übersee-DepartementsRéunion,,,
+Georgia,GE,GEO,268
+Greece,GR,GRC,300
+Haiti,HT,HTI,332
+Hungary,HU,HUN,348
+Ireland,IE,IRL,372
+Jordan,JO,JOR,400
+"Kongo, Republik",,,
+"Korea, Democratic People's Republic of",KP,PRK,408
+Lao People's Democratic Republic,LA,LAO,418
+Lebanon,LB,LBN,422
+Lesotho,LS,LSO,426
+Libya,LY,LBY,434
+Liechtenstein,LI,LIE,438
+Lithuania,LT,LTU,440
+Malawi,MW,MWI,454
+Malaysia,MY,MYS,458
+Mauritius,MU,MUS,480
+Mexico,MX,MEX,484
+Montenegro,ME,MNE,499
+Mozambique,MZ,MOZ,508
+Namibia,NA,NAM,516
+Netherlands,NL,NLD,528
+Norway,NO,NOR,578
+Papua New Guinea,PG,PNG,598
+Poland,PL,POL,616
+Russian Federation,RU,RUS,643
+Serbia,RS,SRB,688
+Seychelles,SC,SYC,690
+Slovakia,SK,SVK,703
+Slovenia,SI,SVN,705
+South Africa,ZA,ZAF,710
+Sudan,SD,SDN,729
+Switzerland,CH,CHE,756
+Syrian Arab Republic,SY,SYR,760
+Tajikistan,TJ,TJK,762
+"Tanzania, United Republic of",TZ,TZA,834
+Trinidad and Tobago,TT,TTO,780
+Tschechische Republik,,,
+Turkey,TR,TUR,792
+Turkmenistan,TM,TKM,795
+Ukraine,UA,UKR,804
+United Kingdom of Great Britain and Northern Ireland,GB,GBR,826
+"Venezuela, Bolivarische Republik",,,
+Viet Nam,VN,VNM,704
+Yemen,YE,YEM,887
+Zimbabwe,ZW,ZWE,716
