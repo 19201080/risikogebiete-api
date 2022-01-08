@@ -1,0 +1,103 @@
+name,alpha2,alpha3,numeric
+Andorra,AD,AND,020
+Angola,AO,AGO,024
+Argentina,AR,ARG,032
+Australia,AU,AUS,036
+Bahamas,BS,BHS,044
+Bahrain,BH,BHR,048
+Barbados,BB,BRB,052
+Belarus,BY,BLR,112
+Belgium,BE,BEL,056
+Belize,BZ,BLZ,084
+"Bolivien, der Plurinationale Staat",,,
+Botswana,BW,BWA,072
+Burundi,BI,BDI,108
+Cabo Verde,CV,CPV,132
+Cameroon,CM,CMR,120
+Canada,CA,CAN,124
+Comoros,KM,COM,174
+Croatia,HR,HRV,191
+Cyprus,CY,CYP,196
+Côte d'Ivoire,CI,CIV,384
+Dänemark inklusive der Färöer und Grönland,,,
+Egypt,EG,EGY,818
+Estonia,EE,EST,233
+Eswatini,SZ,SWZ,748
+Ethiopia,ET,ETH,231
+Fiji,FJ,FJI,242
+Finland,FI,FIN,246
+France,FR,FRA,250
+Gabon,GA,GAB,266
+Georgia,GE,GEO,268
+Ghana,GH,GHA,288
+Greece,GR,GRC,300
+Grenada,GD,GRD,308
+Guinea,GN,GIN,324
+Haiti,HT,HTI,332
+Hungary,HU,HUN,348
+Iceland,IS,ISL,352
+Ireland,IE,IRL,372
+Israel,IL,ISR,376
+Italy,IT,ITA,380
+Jamaica,JM,JAM,388
+Jordan,JO,JOR,400
+Kenya,KE,KEN,404
+"Kongo, Demokratische Republik",,,
+"Kongo, Republik",,,
+"Korea, Democratic People's Republic of",KP,PRK,408
+Kuwait,KW,KWT,414
+Lao People's Democratic Republic,LA,LAO,418
+Lebanon,LB,LBN,422
+Lesotho,LS,LSO,426
+Libya,LY,LBY,434
+Liechtenstein,LI,LIE,438
+Lithuania,LT,LTU,440
+Luxembourg,LU,LUX,442
+Malawi,MW,MWI,454
+Mali,ML,MLI,466
+Malta,MT,MLT,470
+Mauritania,MR,MRT,478
+Mexico,MX,MEX,484
+Monaco,MC,MCO,492
+Montenegro,ME,MNE,499
+Mozambique,MZ,MOZ,508
+Namibia,NA,NAM,516
+Netherlands,NL,NLD,528
+Nigeria,NG,NGA,566
+Norway,NO,NOR,578
+Panama,PA,PAN,591
+Papua New Guinea,PG,PNG,598
+Poland,PL,POL,616
+Portugal,PT,PRT,620
+Qatar,QA,QAT,634
+Russian Federation,RU,RUS,643
+Rwanda,RW,RWA,646
+San Marino,SM,SMR,674
+Seychelles,SC,SYC,690
+Sierra Leone,SL,SLE,694
+Slovakia,SK,SVK,703
+Slovenia,SI,SVN,705
+South Africa,ZA,ZAF,710
+South Sudan,SS,SSD,728
+Spain,ES,ESP,724
+Sudan,SD,SDN,729
+Sweden,SE,SWE,752
+Switzerland,CH,CHE,756
+Syrian Arab Republic,SY,SYR,760
+Tajikistan,TJ,TJK,762
+"Tanzania, United Republic of",TZ,TZA,834
+Togo,TG,TGO,768
+Trinidad and Tobago,TT,TTO,780
+Tschechische Republik,,,
+Turkey,TR,TUR,792
+Turkmenistan,TM,TKM,795
+Uganda,UG,UGA,800
+United Arab Emirates,AE,ARE,784
+United Kingdom of Great Britain and Northern Ireland,GB,GBR,826
+Uruguay,UY,URY,858
+"Venezuela, Bolivarische Republik",,,
+Vereinigte Staaten von Amerika,,,
+Viet Nam,VN,VNM,704
+Yemen,YE,YEM,887
+Zambia,ZM,ZMB,894
+Zimbabwe,ZW,ZWE,716
