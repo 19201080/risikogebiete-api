@@ -73932,5 +73932,379 @@
       "name": "\u00d6sterreich mit Ausnahme der Gemeinden Mittelberg und Jungholz und dem Ri\u00dftal im Gemeindegebiet von Vomp und Eben am Achensee",
       "numeric": null
     }
+  ],
+  "2022-02-25T13:30:00": [
+    {
+      "alpha2": "AM",
+      "alpha3": "ARM",
+      "name": "Armenia",
+      "numeric": "051"
+    },
+    {
+      "alpha2": "AZ",
+      "alpha3": "AZE",
+      "name": "Azerbaijan",
+      "numeric": "031"
+    },
+    {
+      "alpha2": "BH",
+      "alpha3": "BHR",
+      "name": "Bahrain",
+      "numeric": "048"
+    },
+    {
+      "alpha2": "BB",
+      "alpha3": "BRB",
+      "name": "Barbados",
+      "numeric": "052"
+    },
+    {
+      "alpha2": "BY",
+      "alpha3": "BLR",
+      "name": "Belarus",
+      "numeric": "112"
+    },
+    {
+      "alpha2": "BT",
+      "alpha3": "BTN",
+      "name": "Bhutan",
+      "numeric": "064"
+    },
+    {
+      "alpha2": "BR",
+      "alpha3": "BRA",
+      "name": "Brazil",
+      "numeric": "076"
+    },
+    {
+      "alpha2": "CL",
+      "alpha3": "CHL",
+      "name": "Chile",
+      "numeric": "152"
+    },
+    {
+      "alpha2": "CR",
+      "alpha3": "CRI",
+      "name": "Costa Rica",
+      "numeric": "188"
+    },
+    {
+      "alpha2": "CY",
+      "alpha3": "CYP",
+      "name": "Cyprus",
+      "numeric": "196"
+    },
+    {
+      "alpha2": "DM",
+      "alpha3": "DMA",
+      "name": "Dominica",
+      "numeric": "212"
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "D\u00e4nemark inklusive der F\u00e4r\u00f6er und Gr\u00f6nland",
+      "numeric": null
+    },
+    {
+      "alpha2": "EG",
+      "alpha3": "EGY",
+      "name": "Egypt",
+      "numeric": "818"
+    },
+    {
+      "alpha2": "EE",
+      "alpha3": "EST",
+      "name": "Estonia",
+      "numeric": "233"
+    },
+    {
+      "alpha2": "FI",
+      "alpha3": "FIN",
+      "name": "Finland",
+      "numeric": "246"
+    },
+    {
+      "alpha2": "FR",
+      "alpha3": "FRA",
+      "name": "France",
+      "numeric": "250"
+    },
+    {
+      "alpha2": "GE",
+      "alpha3": "GEO",
+      "name": "Georgia",
+      "numeric": "268"
+    },
+    {
+      "alpha2": "GR",
+      "alpha3": "GRC",
+      "name": "Greece",
+      "numeric": "300"
+    },
+    {
+      "alpha2": "GT",
+      "alpha3": "GTM",
+      "name": "Guatemala",
+      "numeric": "320"
+    },
+    {
+      "alpha2": "HT",
+      "alpha3": "HTI",
+      "name": "Haiti",
+      "numeric": "332"
+    },
+    {
+      "alpha2": "IS",
+      "alpha3": "ISL",
+      "name": "Iceland",
+      "numeric": "352"
+    },
+    {
+      "alpha2": "IR",
+      "alpha3": "IRN",
+      "name": "Iran, Islamic Republic of",
+      "numeric": "364"
+    },
+    {
+      "alpha2": "IL",
+      "alpha3": "ISR",
+      "name": "Israel",
+      "numeric": "376"
+    },
+    {
+      "alpha2": "JP",
+      "alpha3": "JPN",
+      "name": "Japan",
+      "numeric": "392"
+    },
+    {
+      "alpha2": "JO",
+      "alpha3": "JOR",
+      "name": "Jordan",
+      "numeric": "400"
+    },
+    {
+      "alpha2": "KP",
+      "alpha3": "PRK",
+      "name": "Korea, Democratic People's Republic of",
+      "numeric": "408"
+    },
+    {
+      "alpha2": "KW",
+      "alpha3": "KWT",
+      "name": "Kuwait",
+      "numeric": "414"
+    },
+    {
+      "alpha2": "LV",
+      "alpha3": "LVA",
+      "name": "Latvia",
+      "numeric": "428"
+    },
+    {
+      "alpha2": "LB",
+      "alpha3": "LBN",
+      "name": "Lebanon",
+      "numeric": "422"
+    },
+    {
+      "alpha2": "LY",
+      "alpha3": "LBY",
+      "name": "Libya",
+      "numeric": "434"
+    },
+    {
+      "alpha2": "LI",
+      "alpha3": "LIE",
+      "name": "Liechtenstein",
+      "numeric": "438"
+    },
+    {
+      "alpha2": "LT",
+      "alpha3": "LTU",
+      "name": "Lithuania",
+      "numeric": "440"
+    },
+    {
+      "alpha2": "MV",
+      "alpha3": "MDV",
+      "name": "Maldives",
+      "numeric": "462"
+    },
+    {
+      "alpha2": "MX",
+      "alpha3": "MEX",
+      "name": "Mexico",
+      "numeric": "484"
+    },
+    {
+      "alpha2": "MC",
+      "alpha3": "MCO",
+      "name": "Monaco",
+      "numeric": "492"
+    },
+    {
+      "alpha2": "MN",
+      "alpha3": "MNG",
+      "name": "Mongolia",
+      "numeric": "496"
+    },
+    {
+      "alpha2": "NL",
+      "alpha3": "NLD",
+      "name": "Netherlands",
+      "numeric": "528"
+    },
+    {
+      "alpha2": "NO",
+      "alpha3": "NOR",
+      "name": "Norway",
+      "numeric": "578"
+    },
+    {
+      "alpha2": "OM",
+      "alpha3": "OMN",
+      "name": "Oman",
+      "numeric": "512"
+    },
+    {
+      "alpha2": "PW",
+      "alpha3": "PLW",
+      "name": "Palau",
+      "numeric": "585"
+    },
+    {
+      "alpha2": "PS",
+      "alpha3": "PSE",
+      "name": "Palestine, State of",
+      "numeric": "275"
+    },
+    {
+      "alpha2": "PG",
+      "alpha3": "PNG",
+      "name": "Papua New Guinea",
+      "numeric": "598"
+    },
+    {
+      "alpha2": "PY",
+      "alpha3": "PRY",
+      "name": "Paraguay",
+      "numeric": "600"
+    },
+    {
+      "alpha2": "PT",
+      "alpha3": "PRT",
+      "name": "Portugal",
+      "numeric": "620"
+    },
+    {
+      "alpha2": "RO",
+      "alpha3": "ROU",
+      "name": "Romania",
+      "numeric": "642"
+    },
+    {
+      "alpha2": "RU",
+      "alpha3": "RUS",
+      "name": "Russian Federation",
+      "numeric": "643"
+    },
+    {
+      "alpha2": "SG",
+      "alpha3": "SGP",
+      "name": "Singapore",
+      "numeric": "702"
+    },
+    {
+      "alpha2": "SK",
+      "alpha3": "SVK",
+      "name": "Slovakia",
+      "numeric": "703"
+    },
+    {
+      "alpha2": "SI",
+      "alpha3": "SVN",
+      "name": "Slovenia",
+      "numeric": "705"
+    },
+    {
+      "alpha2": "SB",
+      "alpha3": "SLB",
+      "name": "Solomon Islands",
+      "numeric": "090"
+    },
+    {
+      "alpha2": "CH",
+      "alpha3": "CHE",
+      "name": "Switzerland",
+      "numeric": "756"
+    },
+    {
+      "alpha2": "SY",
+      "alpha3": "SYR",
+      "name": "Syrian Arab Republic",
+      "numeric": "760"
+    },
+    {
+      "alpha2": "TJ",
+      "alpha3": "TJK",
+      "name": "Tajikistan",
+      "numeric": "762"
+    },
+    {
+      "alpha2": "TT",
+      "alpha3": "TTO",
+      "name": "Trinidad and Tobago",
+      "numeric": "780"
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Tschechische Republik",
+      "numeric": null
+    },
+    {
+      "alpha2": "TR",
+      "alpha3": "TUR",
+      "name": "Turkey",
+      "numeric": "792"
+    },
+    {
+      "alpha2": "TM",
+      "alpha3": "TKM",
+      "name": "Turkmenistan",
+      "numeric": "795"
+    },
+    {
+      "alpha2": "UY",
+      "alpha3": "URY",
+      "name": "Uruguay",
+      "numeric": "858"
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "Venezuela, Bolivarische Republik",
+      "numeric": null
+    },
+    {
+      "alpha2": "VN",
+      "alpha3": "VNM",
+      "name": "Viet Nam",
+      "numeric": "704"
+    },
+    {
+      "alpha2": "YE",
+      "alpha3": "YEM",
+      "name": "Yemen",
+      "numeric": "887"
+    },
+    {
+      "alpha2": null,
+      "alpha3": null,
+      "name": "\u00d6sterreich mit Ausnahme der Gemeinden Mittelberg und Jungholz und dem Ri\u00dftal im Gemeindegebiet von Vomp und Eben am Achensee",
+      "numeric": null
+    }
   ]
 }
